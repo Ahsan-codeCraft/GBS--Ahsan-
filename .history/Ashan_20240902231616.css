@@ -326,12 +326,7 @@ body {
   @media (max-width:460px) {
   
 
-    .image{
-      display: none;
-    }
-    .imaged{
-      width: 80%;
-    }
+    
   #my_hr, #my_hr0{
     display: none;
   } 
