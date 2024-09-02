@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #030712;
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1536px;
+  height: 100px; /* Adjust height to fit the size of the text */
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.itemLeft,
+.itemRight {
+  font-size: 6vw; /* Adjust font size to ensure readability */
+  color: white;
+  white-space: nowrap; /* Prevent line breaks */
+  position: absolute;
+  width: 100vw; /* Ensure width matches viewport width */
+  text-align: center; /* Center text horizontally */
+  animation-timing-function: linear;
+  animation-duration: 30s; /* Adjust duration as needed */
+  animation-iteration-count: infinite;
+}
+
+.itemLeft {
+  animation-name: scrollLeft;
+}
+
+.itemRight {
+  animation-name: scrollRight;
+}
+
+/* Optional: Adjust animation delays to stagger items */
+.item1 {
+  animation-delay: calc(30s / 8 * (8 - 1) * -1);
+}
+
+.item2 {
+  animation-delay: calc(30s / 8 * (8 - 2) * -1);
+}
+
+.item3 {
+  animation-delay: calc(30s / 8 * (8 - 3) * -1);
+}
+
+.item4 {
+  animation-delay: calc(30s / 8 * (8 - 4) * -1);
+}
+
+.item5 {
+  animation-delay: calc(30s / 8 * (8 - 5) * -1);
+}
+
+.item6 {
+  animation-delay: calc(30s / 8 * (8 - 6) * -1);
+}
+
+.item7 {
+  animation-delay: calc(30s / 8 * (8 - 7) * -1);
+}
+
+.item8 {
+  animation-delay: calc(30s / 8 * (8 - 8) * -1);
+}

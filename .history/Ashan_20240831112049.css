@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ensure no horizontal scrollbar */
+    font-family: Arial, sans-serif;
+}
+
+.text_scroll {
+    position: relative;
+    height: 80px; /* Adjust height as needed */
+    background-color: #f0f0f0; /* Light background color */
+    overflow: hidden; /* Hide text that is outside the container */
+}
+
+.scroll {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    white-space: nowrap; /* Prevent text from wrapping */
+    align-items: center;
+    font-size: 24px; /* Base font size for first text */
+    font-weight: normal;
+}
+
+.scroll li {
+    display: inline;
+    padding: 0 20px; /* Adjust padding for spacing */
+    list-style: none;
+    margin: 0;
+}
+
+/* Animation for scrolling from right to left */
+.left-to-right {
+    top: 0;
+    animation: scroll-left-to-right 10s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes scroll-left-to-right {
+    0% {
+        transform: translateX(100%); /* Start from the right edge */
+    }
+    100% {
+        transform: translateX(-100%); /* End at the left edge */
+    }
+}
+
+/* Animation for scrolling from left to right */
+.right-to-left {
+    bottom: 0;
+    animation: scroll-right-to-left 10s linear infinite; /* Adjust duration as needed */
+    font-size: 36px; /* Bigger font size for the second text */
+    font-weight: bold; /* Bolder font for the second text */
+}
+
+@keyframes scroll-right-to-left {
+    0% {
+        transform: translateX(calc(-100%)); /* Start from the left edge */
+    }
+    100% {
+        transform: translateX(100%); /* End at the right edge */
+    }
+}

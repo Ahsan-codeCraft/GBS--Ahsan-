@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+body {
+  background-color: #030712;
+}
+
+.text_scroll {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.wrapper {
+  width: 90%;
+  height: 140px; 
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.itemLeft
+ {
+  font-size: 13.5vw;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  position: absolute;
+  width: 100vw; 
+  text-align: center;
+  animation-name: scrollLeft;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+.itemRight{
+  font-size: 12.5vw;
+  font-weight: bold;
+  color: white;
+  white-space: nowrap;
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+  animation-name: scrollRight;
+  animation-timing-function: linear;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+.item1 {
+  animation-delay: 0s;
+}
+
+.item2 {
+  animation-delay: -15s; 
+}
+
+.item3 {
+  animation-delay: -30s;
+}
+
+.item4 {
+  animation-delay: -45s;
+}
+
+@media (min-width:1500px) {
+  
+  .wrapper{
+    height: 180;
+  }
+
+}
+
+
+
+
+
+
+
+/* -----Portfolios-------- */
+
+.h1_port{
+  color: white;
+  font-size: 3vw;
+  text-align: center;
+  padding-block: 4rem;
+}
+.portfolio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150vh;
+  margin-block: 2rem;
+  /* background-color: #f0f0f0; */
+}
+
+.inner_portfolio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.col-1,
+.col-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  position: relative;
+  width: 35vw;
+  height: 45vh;
+  border-radius: 1rem;
+  margin: 10px;
+  overflow: hidden;
+}
+.image img{
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.imaged {
+  position: relative;
+  width: 35vw;
+  height: 45vh;
+  border-radius: 1rem;
+  margin: 10px;
+overflow: hidden;
+}
+.imaged img{
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+
+
+
