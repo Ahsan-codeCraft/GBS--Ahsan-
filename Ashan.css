@@ -249,7 +249,7 @@ body{
   margin-block: 2rem;
   transition: transform  .5s;
 }
-.info_t{
+.info_h{
   font-size: 1.5vw;
   font-weight: bold;
 }
