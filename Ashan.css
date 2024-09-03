@@ -250,6 +250,10 @@ body{
   transition: transform  .5s;
 }
 .info_t{
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+.info_t{
   font-size: 2vw;
   font-weight: bold;
   transition: transform .8s;
