@@ -193,7 +193,7 @@ gsap.from(socialImages,
         opacity: 0,            // End opacity
     })
 
-// background----------
+background----------
 function createMeteor() {
     const meteor = document.createElement('div');
     meteor.classList.add('meteor');

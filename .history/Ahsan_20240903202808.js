@@ -194,35 +194,35 @@ gsap.from(socialImages,
     })
 
 // background----------
-function createMeteor() {
-    const meteor = document.createElement('div');
-    meteor.classList.add('meteor');
+// function createMeteor() {
+//     const meteor = document.createElement('div');
+//     meteor.classList.add('meteor');
 
-    // Randomize starting positions
-    const startX = Math.random() * window.innerWidth;
-    const startY = Math.random() * window.innerHeight - 100;
+//     // Randomize starting positions
+//     const startX = Math.random() * window.innerWidth;
+//     const startY = Math.random() * window.innerHeight - 100;
 
-    // Set initial position
-    meteor.style.left = `${startX}px`;
-    meteor.style.top = `${startY}px`;
+//     // Set initial position
+//     meteor.style.left = `${startX}px`;
+//     meteor.style.top = `${startY}px`;
 
-    document.querySelector('.background-container').appendChild(meteor);
+//     document.querySelector('.background-container').appendChild(meteor);
 
-    // Animate using GSAP
-    gsap.to(meteor, {
-        x: -60 - startX, // Move to the left-top
-        y: 600 - startY, // Move downwards
-        duration: Math.random() * 1 + 1, // Vary duration
-        opacity: 1,
-        ease: "power4.out",
-        onComplete: () => {
-            meteor.remove(); // Remove after animation
-        }
-    });
-}
+//     // Animate using GSAP
+//     gsap.to(meteor, {
+//         x: -60 - startX, // Move to the left-top
+//         y: 600 - startY, // Move downwards
+//         duration: Math.random() * 1 + 1, // Vary duration
+//         opacity: 1,
+//         ease: "power4.out",
+//         onComplete: () => {
+//             meteor.remove(); // Remove after animation
+//         }
+//     });
+// }
 
-// Create meteors at intervals
-setInterval(createMeteor, 600);
+// // Create meteors at intervals
+// setInterval(createMeteor, 600);
 
 gsap.from('#timeTo',
     {

@@ -123,7 +123,7 @@ gsap.from('#my_p1',
         filter: "blur(5px)",
         duration: 1,
         opacity: 0,            // End opacity
-        x: -50,
+        x: -80,
     })
 
     gsap.from('#my_p2',
@@ -138,7 +138,7 @@ gsap.from('#my_p1',
             filter: "blur(5px)",
             duration: 1,
             opacity: 0,            // End opacity
-            x: 50,
+            x: 80,
         })
     
         gsap.from('#my_p3',
@@ -153,7 +153,7 @@ gsap.from('#my_p1',
                 filter: "blur(5px)",
                 duration: 1,
                 opacity: 0,            // End opacity
-                x: -50,
+                x: -150,
             })
         
 
