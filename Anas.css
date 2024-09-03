@@ -431,7 +431,7 @@ body{
 /*     SECTION 04     */
 
 .section-4{
-    margin-top: 20vh;
+    margin-top: 40vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -457,6 +457,9 @@ body{
     justify-content: space-between;
     align-items: center;
     width: 87vw;
+    transform: translateY(10vh);
+    transition: all 0.8s ease;
+    opacity: 0;
 }
 .paraa{
     font-size: 2vw;
@@ -464,7 +467,7 @@ body{
 }   
 @media (max-width: 500px) {
     .section-4{
-        margin-top: 65vw;
+        margin-top: 70vw;
     }
     .btnn{
         display: none;
@@ -645,9 +648,13 @@ body{
 }
 .about-para{
     width: 45vw;
+    height: fit-content;
     font-size: 2.5vw;
     margin-top: 3vw;
     margin-left: 1vw;
+    transform: translateY(10vh);
+    transition: all 0.8s ease;
+    opacity: 0;
 }
 .about-para-r{
     width: 84vw;
@@ -657,6 +664,11 @@ body{
     justify-content: center;
     align-items: end;
     flex-direction: column;
+}
+.about-para-2{
+    transform: translateY(5vh);
+    transition: all 0.8s ease;
+    opacity: 0;
 }
 .about-right{
     width: 31vw;
@@ -669,6 +681,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translateY(5vh);
+    transition: all 0.8s ease;
+    opacity: 0;
 }
 @media (max-width: 500px) {
     .section-6{

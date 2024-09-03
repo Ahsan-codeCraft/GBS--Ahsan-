@@ -525,8 +525,118 @@
         y: "70vh",
         ease: "sine.inOut",
       });
-    
+
+
+
+      gsap.to(".paraa-btn", {
+        scrollTrigger: {
+          trigger: ".services",
+          start: "top 50%",
+          end: "top 50%",
+          scrub: true,
+        }, 
+        y: "4vh",
+        opacity: 1,
+      });
+      
+      gsap.to(".about-para", {
+        scrollTrigger: {
+          trigger: ".about-para",
+          start: "top 90%",
+          end: "top 100%",
+          scrub: true,
+        }, 
+        y: "0vh",
+        opacity: 1,
+      });
+      gsap.to(".about-para-2", {
+        scrollTrigger: {
+          trigger: ".about-para-2",
+          start: "top 90%",
+          end: "top 100%",
+          markers: true,
+          scrub: true,
+        }, 
+        y: "0vh",
+        opacity: 1,
+      });
+      gsap.to(".a-btn", {
+        scrollTrigger: {
+          trigger: ".a-btn",
+          start: "top 90%",
+          end: "top 100%",
+          scrub: true,
+        }, 
+        y: "0vh",
+        opacity: 1,
+      });
+
+
+
+
+
+    }else if(window.innerWidth < 500){
+
+
+
+
+
+
+
+
+
+
+
+
+      gsap.to(".paraa-btn", {
+        scrollTrigger: {
+          trigger: ".services",
+          start: "top 75%",
+          end: "top 75%",
+          scrub: true,
+        }, 
+        y: "4vh",
+        opacity: 1,
+      });
+      gsap.to(".about-para", {
+        scrollTrigger: {
+          trigger: ".about-para",
+          start: "top 90%",
+          end: "top 100%",
+          scrub: true,
+        }, 
+        y: "0vh",
+        opacity: 1,
+      });
+      gsap.to(".about-para-2", {
+        scrollTrigger: {
+          trigger: ".about-para-2",
+          start: "top 90%",
+          end: "top 100%",
+          markers: true,
+          scrub: true,
+        }, 
+        y: "0vh",
+        opacity: 1,
+      });
+      gsap.to(".a-btn", {
+        scrollTrigger: {
+          trigger: ".a-btn",
+          start: "top 95%",
+          end: "top 100%",
+          scrub: true,
+        }, 
+        y: "0vh",
+        opacity: 1,
+      });
+
+
+
+
+
     }
+
+      
   </script>
   
 
