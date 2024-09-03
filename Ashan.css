@@ -188,7 +188,10 @@ body{
   width: 100%;
   overflow: hidden;
 }
-
+#tiktok-2{
+  width: 5.25vw;
+  border-radius: 50%;
+}
 
 .meteor {
   position: absolute;
