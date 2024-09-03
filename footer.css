@@ -1,7 +1,7 @@
 .ahsan_container {
     position: relative;
     min-height: 100vh;
-    background: black;
+    background-color: #121315;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.95) 20%);
+    background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.85) 20%);
     z-index: 1;
 }
 
