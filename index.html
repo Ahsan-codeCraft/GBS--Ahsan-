@@ -381,22 +381,22 @@
   <!-- Social Media Section -->
   <section class="background-container">
     <div class="socail_inner">
-      <div class="socail_item">
+      <div class="socail_item" id="item-1">
         <p>FACEBOOK</p>
         <img src="anas-assets\facebook.svg" alt="">
       </div>
       <hr>
-      <div class="socail_item">
+      <div class="socail_item" id="item-2">
         <p>LINKEDIN</p>
         <img src="Picture/linkedin.png" alt="">
       </div>
       <hr>
-      <div class="socail_item">
+      <div class="socail_item" id="item-3">
         <p>INSTAGRAM</p>
         <img src="Picture/instagram.png" alt="">
       </div>
       <hr>
-      <div class="socail_item">
+      <div class="socail_item" id="item-4">
         <p>TIKTOK</p>
         <img src="anas-assets\tiktok.png" alt="" id="tiktok-2">
       </div>
@@ -477,6 +477,26 @@
       }
       open.addEventListener('click',showMenu);
       close.addEventListener('click',hideMenu);
+
+
+
+
+      document.getElementById('item-1').addEventListener('click', function(){
+        const url = 'https://www.facebook.com/profile.php?id=61563752129818';
+        window.open(url, '_blank');
+      });
+      document.getElementById('item-2').addEventListener('click', function(){
+        const url = '#';
+        // window.open(url, '_blank');
+      });
+      document.getElementById('item-3').addEventListener('click', function(){
+        const url = 'https://www.instagram.com/global.bridge.solutions?igsh=MXRqamN0NHA5YjAzYw==';
+        window.open(url, '_blank');
+      });
+      document.getElementById('item-4').addEventListener('click', function(){
+        const url = 'https://www.tiktok.com/@globalbridgesolutions?_t=8oajOq6bv3x&_r=1&fbclid=PAZXh0bgNhZW0CMTEAAaY5_yX2HczvnS6RdU1DHgYpMn3YENARxNkBtClgDUrXOHgxtS9E6Ik4mog_aem_t7Y28ToaHNVmLcLEn9SP-A';
+        window.open(url, '_blank');
+      });
 
    </script>
 

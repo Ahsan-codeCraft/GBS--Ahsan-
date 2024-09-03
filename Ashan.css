@@ -159,6 +159,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 .socail_item img{
   width: 5vw;
