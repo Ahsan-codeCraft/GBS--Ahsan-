@@ -35,6 +35,7 @@
 /* Responsive font size for the text */
 @media (max-width: 768px) {
     .line-text {
+    
         font-size: 5rem;
     }
 }
