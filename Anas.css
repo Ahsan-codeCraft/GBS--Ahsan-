@@ -258,9 +258,6 @@ body{
         width: 100vw;
         overflow: hidden;
     }
-    .menu01{
-        position: fixed !important;
-    }
     .menu-close{
         width: 12vw;
         height: 12vw;
@@ -272,12 +269,13 @@ body{
         width: 5vw;
     }
     .menu-enter{
-        height: 130vh;
-        width: 120vw;
+        height: 100vh;
+        width: 100vw;
         flex-direction: column;
         align-items: start;
-        justify-content: center;
-        padding-left: 15vw;
+        justify-content: end;
+        padding-left: 10vw;
+        padding-bottom: 10vw;
     }
     .menu-left{
         width: 60vw;
@@ -700,7 +698,7 @@ body{
     line-height: 8vw;
 }
 .about-para{
-    width: 45vw;
+    width: 50vw;
     height: fit-content;
     font-size: 2.5vw;
     margin-top: 3vw;
@@ -751,7 +749,8 @@ body{
         width: 80vw;
     }
     .about-para-r{
-        height: 35vw;
+        height: 40vw;
+        justify-content: end;
         align-items: start;
     }
     .about-right{
@@ -878,6 +877,7 @@ body{
 @media (max-width: 500px) {
     .section-7{
         overflow-x: hidden;
+        overflow-y: hidden;
         height: 150vh;
     }
     .acheive{
@@ -888,7 +888,7 @@ body{
     }
     .card{
         width: 90vw;
-        height: 55vw;
+        height: 53vw;
         border-radius: 10px;
     }
     .right-acheive , .left-acheive{
@@ -934,5 +934,14 @@ body{
     .card-4{
         background-color: #decf3e;
         color: black;
+    }
+    .card-1,.card-2{
+        transform: translateX(-30vw) rotate(-45deg);
+        opacity: 0;
+        /* transform-origin: bottom left; */
+    }
+    .card-3, .card-4{
+        transform: translateX(30vw) rotate(45deg) ;
+        opacity: 0;
     }
 }
