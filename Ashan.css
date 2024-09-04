@@ -14,9 +14,6 @@ body{
 .text_scroll {
   height: 100vh;
   font-family: "Noto Sans JP", sans-serif;
-  /* font-weight: 100; */
-  /* font-style: normal; */
-  /* width: 90vw; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,7 +24,7 @@ body{
 
 .wrapper {
   width: 90%;
-  height: 40%;
+  height: 25%;
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -40,11 +37,6 @@ body{
     display: flex;
     align-items: center;
   }
-  
-  
-  
-  
-  
   
   @keyframes scrollLeft {
   from {
@@ -66,16 +58,16 @@ body{
 
 .itemLeft,
 .itemRight {
-  font-weight: bold;
+  font-weight: 800;
   color: white;
   white-space: nowrap;
   position: absolute;
-  height: 90%;
   width: 100vw;
   text-align: center;
   animation-timing-function: linear;
   animation-duration: 30s;
   animation-iteration-count: infinite;
+
 }
 
 .itemLeft {
@@ -150,8 +142,8 @@ body{
 /* ------TEXT ANIMATION---------- */
 .my_text{
   color: white;
-  font-size: 10vw;
-  font-weight: 400;
+  font-size: 12vw;
+  font-weight: 600;
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
@@ -181,10 +173,15 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: 1s;
 }
-.socail_item:hover{
+
+
+
+.myHover_s{
+  transition: 1s;
   
+}
+.myHover_s:hover{
   transform: scale(1.2);
 }
 .socail_inner p{
