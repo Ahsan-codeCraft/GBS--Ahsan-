@@ -22,7 +22,7 @@ body{
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
-  gap: 1rem;
+  /* gap: 1rem; */
 }
 
 .wrapper {

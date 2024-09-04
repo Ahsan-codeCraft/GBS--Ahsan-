@@ -19,7 +19,25 @@ body{
     background: #FF0000;
     display: none;
 }
-
+@media (max-width: 500px) {
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        background-color: #121315;
+    }
+    
+    ::-webkit-scrollbar {
+        width: 0;
+        background: transparent;
+        display: none;
+    
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #FF0000;
+        display: none;
+    }
+}
 
 /*      SECTION-1 (Header-01)      */
 .section-1{
@@ -59,8 +77,6 @@ body{
     align-items: center;
     gap: 1vw;
     cursor: pointer;
-    position: relative;
-    z-index: 999;
 }
 .menu{
     font-size: 1vw;
@@ -76,7 +92,6 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10%;
-    transition: transform 2s;
 }
 ._1{
     height: 2px;
@@ -122,20 +137,29 @@ body{
 
 
 /*         MENU _ OPEN SECTION      */
-/* .graySection{
+.graySection{
     height: 100vh;
     width: 100vw;
     position: fixed;
-    top: 0;
-    background-color: gray;
+    /* top: 0; */
+    background-color: grey;
     z-index: 8;
-    transition: all 0.2 ease-in;
-} */
+    transition: all 0.5s ease-in;
+    transform: translateY(100vh);
+    border-radius: 60%;
+}
 .menu01{
     display: block;
-    position: absolute;
+    position: fixed;
     z-index: 9;
-    transition: all 0.4s ease-in;
+    transition: all 0.8s ease-in;
+    height: 100vh;
+    width: 100vw;
+    transform: translateY(100vh);
+}
+#menu-part-2{
+    position: relative;
+    z-index: 100;
 }
 .menu-close{
     width: 3vw;
@@ -230,7 +254,12 @@ body{
 }
 @media (max-width: 500px) {
     #menu01{
-        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+    }
+    .menu01{
+        position: fixed !important;
     }
     .menu-close{
         width: 12vw;
@@ -243,16 +272,16 @@ body{
         width: 5vw;
     }
     .menu-enter{
-        height: 90vh;
-        width: 70vw;
+        height: 130vh;
+        width: 120vw;
         flex-direction: column;
         align-items: start;
         justify-content: center;
-        margin-left: 10vw;
-        margin-bottom: 0vw;
+        padding-left: 15vw;
     }
     .menu-left{
         width: 60vw;
+
     }
     .menu-h{
         font-size: 12vw;
@@ -300,7 +329,6 @@ body{
     align-items: center;
     justify-content: center;
     color: white;
-    font-family: 'Montserrat', sans-serif;
     font-family: 'Bebas Neue', sans-serif;
 }
 .main{
@@ -319,12 +347,13 @@ body{
     margin-top: -3vw;
 }
 .main-heading{
-    font-size: 8vw;
-    /* line-height: 4vw; */
-    /* margin-bottom: 2vw; */
+    font-size: 7.5vw;
+    line-height: 6.5vw;
+    margin-bottom: 1vw;
+    font-weight: 400;
 }
 .main-para{
-    font-size: 0.85vw;
+    font-size: 1.5vw;
 }
 .arrow-down{
     width: 1.5vw;
