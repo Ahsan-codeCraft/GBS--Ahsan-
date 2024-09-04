@@ -62,9 +62,9 @@ body{
     position: relative;
     z-index: 999;
 }
-.menu{
+/* .menu{ */
     font-size: 1vw;
-    font-weight: 700; 
+    font-weight: 700; */
 }
 .menu-open{
     width: 3vw;
