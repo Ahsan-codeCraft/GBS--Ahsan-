@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/dirtyline-36daysoftype-2022');
+
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  font-family: "Syne", sans-serif;
 }
 
 body{
@@ -217,7 +220,7 @@ body{
 }
 .row1 p{
   font-size: 15vw;
-  font-weight: bold;
+  font-weight: 400;
   line-height: .8;
 }
 .col_C a{
@@ -251,12 +254,12 @@ body{
 }
 .info_h{
   font-size: 1.5vw;
-  font-weight: bold;
+  font-weight: 400;
 }
 .info_t{
   font-size: 2.5vw;
   font-size: 2vw;
-  font-weight: bold;
+  font-weight:400;
   transition: transform .8s;
 }
 .info_t:hover{
@@ -274,9 +277,13 @@ body{
 
 .footer_row{
   width: 80vw;
-  margin: 12vmax auto;
+  padding: 2rem;
+  margin-top: 4rem;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
+  align-items: end;
   color: white;
   font-size: 2vw;
 }
@@ -291,7 +298,11 @@ body{
 
 
 /* ------------------ */
+#footer-01{
 
+  background: black;
+
+}
 .footer_row1{
   height: 100vh;
   padding: 0;

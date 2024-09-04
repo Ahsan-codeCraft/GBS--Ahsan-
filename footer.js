@@ -1,13 +1,18 @@
-var container = document.querySelector(".ahsan_container");
-var lightEffect = document.createElement("div");
-lightEffect.classList.add("cursor-light");
-container.appendChild(lightEffect);
+// Select the .footer_text_scroll container
+var container = document.querySelector(".footer_text_scroll");
 
+// Select the .footer_cursor-light element
+var lightEffect = document.querySelector(".footer_cursor-light");
+
+// Function to update the position of the torch effect
 function updateTorchPosition(x, y) {
-    lightEffect.style.setProperty('--x', x + 'px');
-    lightEffect.style.setProperty('--y', y + 'px');
+    if (lightEffect) {
+        lightEffect.style.setProperty('--x', x + 'px');
+        lightEffect.style.setProperty('--y', y + 'px');
+    }
 }
 
+// Add event listeners to the container
 container.addEventListener('mousemove', e => {
     var rect = container.getBoundingClientRect();
     var x = e.clientX - rect.left;

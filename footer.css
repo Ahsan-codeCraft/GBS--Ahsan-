@@ -1,47 +1,54 @@
-.ahsan_container {
-    position: relative;
-    min-height: 100vh;
-    background-color: #121315;
+.footer_text_scroll {
+    background: black;
+    height: 60vh;
     display: flex;
-    flex-direction: column;
+    align-items: end;
     justify-content: center;
-    align-items: center;
-    cursor: url('torch.svg'), auto;
-    overflow: hidden; /* Ensure child elements don't overflow */
+    overflow: hidden;
+    position: relative; /* Ensure the torch effect is confined to this section */
 }
 
-.line-text {
-    color: #fff;
-    font-size: 10rem;
+.footer_wrapper {
+    width: 100%;
+    position: relative;
+    top: 20%;
+    overflow: hidden;
+}
+
+.footer_scroll-content {
+    display: flex;
+    animation: footer_scrollLeft 20s linear infinite;
+
+}
+
+.footer_itemLeft {
     font-weight: bold;
-    background: linear-gradient(10deg, black 70%, white 30%);
-    background-size: 10px 10px; /* Adjust this value to change the stripe size */
+    color: white;
+    white-space: nowrap;
+    padding: 0 2rem;
+    font-size: 25vw;
+    background: linear-gradient(10deg, black 60%, white 40%);
+    background-size: 10px 10px;
     -webkit-background-clip: text;
     color: transparent;
-    text-align: center; /* Ensure the text is centered on smaller screens */
 }
 
-.cursor-light {
-    position: absolute; 
+@keyframes footer_scrollLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.footer_cursor-light {
+    position: absolute; /* Absolute positioning within .footer_text_scroll */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     pointer-events: none;
     background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.85) 20%);
-    z-index: 1;
-}
-
-/* Responsive font size for the text */
-@media (max-width: 768px) {
-    .line-text {
-    
-        font-size: 5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .line-text {
-        font-size: 3rem; 
-    }
+    z-index: 1; /* Ensure it's on top of the text */
 }

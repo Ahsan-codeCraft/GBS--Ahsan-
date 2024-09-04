@@ -1,0 +1,52 @@
+.footer_text_scroll {
+    background: black;
+    height: 60vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Add relative position to allow .cursor-light to overlay properly */
+}
+
+.footer_wrapper {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer_scroll-content {
+    display: flex;
+    animation: scrollLeft 40s linear infinite;
+}
+
+.footer_itemLeft {
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
+    padding: 0 2rem;
+    font-size: 25vw;
+    background: linear-gradient(10deg, black 60%, white 40%);
+    background-size: 10px 10px; /* Adjust this value to change the stripe size */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes scrollLeft {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.footer_cursor-light {
+    position: fixed; /* Changed to fixed to ensure it overlays the entire page */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.85) 20%);
+    z-index: 10; /* Ensure it's on top of other elements */
+}
