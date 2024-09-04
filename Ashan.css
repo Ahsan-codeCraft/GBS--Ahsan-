@@ -175,31 +175,8 @@ body{
   align-items: center;
 }
 
-/* --------- */
-
-.bow-arrow {
-  border: none;
-  height: 2px; /* Thickness of the line */
-  background-color: #000; /* Color of the line */
-  position: relative;
-}
-
-.bow-arrow::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 0; /* Position arrowhead at the right end */
-  transform: translateY(-50%);
-  border: 20px solid transparent;
-  border-left-color: #fff; /* Color of the arrowhead */
-}
 
 
-
-
-
-
-/*  */
 .myHover_s{
   transition: 1s;
   
