@@ -6,6 +6,9 @@
     justify-content: center;
     overflow: hidden;
     position: relative; /* Ensure the torch effect is confined to this section */
+    cursor: url('Picture/icons8-flash-light-48.png'), auto; /* Add fallback cursor */
+    /* transform: perspective(100px);
+    transform: rotateZ(10deg); */
 }
 
 .footer_wrapper {
@@ -13,13 +16,11 @@
     position: relative;
     top: 30%;
     overflow: hidden;
-    
 }
 
 .footer_scroll-content {
     display: flex;
     animation: footer_scrollLeft 20s linear infinite;
-
 }
 
 .footer_itemLeft {
