@@ -42,7 +42,9 @@
 
 
   <!-- OPEN MENU SECTION -->
+   <div class="graySection"></div>
    <section class="menu01" id="menu01">
+
       <section class="section-1">
           <nav class="header-in">
             <div class="logo">
@@ -55,8 +57,6 @@
             <div class="menu-part">
               <div class="menu">CLOSE</div>
               <div class="menu-close" id="menu-close">
-                <!-- <span class="_1">__</span> -->
-                <!-- <span class="_2">_</span> -->
                 <span class="_3"></span>
                 <span class="_4"></span>
               </div>
@@ -64,6 +64,7 @@
           </nav>
         </section>
       <div class="menu-enter">
+        <!-- <div class="graySection"></div> -->
           <div class="menu-left">
               <span class="menu-h">Work</span>
               <span class="menu-h">About</span>
@@ -461,19 +462,33 @@
       const main = document.getElementById('main-01');
       const header = document.getElementById('header-1');
       const footer = document.getElementById('footer-01');
+      const menu01 = document.getElementById('menu01');
+      const graySection = document.getElementById('.graySection');
+
 
 
       function showMenu(){
-          main.style.display = 'none';
-          header.style.display = 'none';
+        main.style.display = 'none';
+        header.style.display = 'none';
           footer.style.display = 'none';
-          document.getElementById('menu01').style.display = 'block';
+          // menu01.style.display = 'block';
+          menu01.style.transform = 'translateY(0vh)';
+          menu01.style.opacity = 1;
+          // graySection.style.transform = 'translateY(0vh)';
+          // graySection.style.opacity = 0;
+
+
       }
       function hideMenu(){
-          main.style.display = 'block';
-          header.style.display = 'block';
+        main.style.display = 'block';
+        header.style.display = 'block';
           footer.style.display = 'block';
-          document.getElementById('menu01').style.display = 'none';
+          // menu01.style.display = 'none';
+          menu01.style.transform = 'translateY(100vh)';
+          menu01.style.opacity = 0;
+          // graySection.style.transform = 'translateY(100vh)';
+          // megraySectionnu01.style.opacity = 1;
+
       }
       open.addEventListener('click',showMenu);
       close.addEventListener('click',hideMenu);
@@ -511,6 +526,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger);
+    
+
     if (window.innerWidth > 500) {
       gsap.to(".video-in", {
         scrollTrigger: {
@@ -569,6 +586,55 @@
         y: "0vh",
         opacity: 1,
       });
+
+
+      gsap.to(".card-1", {
+        scrollTrigger: {
+          trigger: ".acheive",
+          start: "-10% 90%",
+          end: "30% center",
+          scrub: true,
+          // markers:true
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+      gsap.to(".card-2", {
+        scrollTrigger: {
+          trigger: ".acheive",
+          start: "20% 90%",
+          end: "30% center",
+          scrub: true,
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+      gsap.to(".card-3", {
+        scrollTrigger: {
+          trigger: ".acheive",
+          start: "40% 90%",
+          end: "50% center",
+          scrub: true,
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+      gsap.to(".card-4", {
+        scrollTrigger: {
+          trigger: ".acheive",
+          start: "70% 90%",
+          end: "80% center",
+          scrub: true,
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+
+
 
 
 

@@ -59,6 +59,8 @@ body{
     align-items: center;
     gap: 1vw;
     cursor: pointer;
+    position: relative;
+    z-index: 999;
 }
 .menu{
     font-size: 1vw;
@@ -120,8 +122,20 @@ body{
 
 
 /*         MENU _ OPEN SECTION      */
+/* .graySection{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: gray;
+    z-index: 8;
+    transition: all 0.2 ease-in;
+} */
 .menu01{
-    display: none;
+    display: block;
+    position: absolute;
+    z-index: 9;
+    transition: all 0.4s ease-in;
 }
 .menu-close{
     width: 3vw;
@@ -148,14 +162,19 @@ body{
     transform: rotate(45deg);
 }
 .menu-enter{
-    height: 70vh;
+    height: 100vh;
     width: 100vw;
-    margin-bottom: 5vh;
+    /* margin-bottom: 5vh; */
     display: flex;
     justify-content: center;
     align-items: end;
     color: white;
     font-family: Arial, sans-serif;
+    position: fixed;
+    top: 0;
+    /* border: 1px solid red; */
+    background-color: #000;
+    padding-bottom: 4vw;
 }
 .menu-left{
     width: 40vw;
@@ -431,7 +450,7 @@ body{
 /*     SECTION 04     */
 
 .section-4{
-    margin-top: 40vh;
+    margin-top: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -721,23 +740,23 @@ body{
     align-items: center;
     font-family: Arial, sans-serif;
     color: white;
-    margin-top: 5vh;
+    margin-top: 10vh;
     margin-bottom: 5vh;
 }
 .acheive{
-    width: 88vw;
+    width: 100vw;
     display: flex;
     justify-content: center;
 }
 .left-acheive{
-    width: 43vw;
+    width: 45vw;
     display: flex;
     align-items: start;
     flex-direction: column;
     gap: 2.2vw;
 }
 .right-acheive{
-    width: 43vw;
+    width: 45vw;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -745,13 +764,13 @@ body{
     margin-top: 11.5vw;
 }
 .card{
-    width: 42vw;
-    height: 22vw;
+    width: 44vw;
+    height: 23.5vw;
     border-radius: 2vw;
     background-color: #17181b;
     display: flex;
     overflow: hidden;
-    transition: all 0.5s ease;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 .card-1:hover{
     background-color: #c93202;
@@ -786,6 +805,15 @@ body{
         transform: translateY(0);
     }
         }
+.card-1,.card-3{
+    transform: translateX(-30vw) rotate(-45deg);
+    opacity: 0;
+    /* transform-origin: bottom left; */
+}
+.card-2, .card-4{
+    transform: translateX(30vw) rotate(45deg) ;
+    opacity: 0;
+}
 .inner-l{
     display: flex;
     width: 17vw;
