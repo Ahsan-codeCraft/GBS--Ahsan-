@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
 @import url('https://fonts.cdnfonts.com/css/dirtyline-36daysoftype-2022');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: "Syne", sans-serif;
 }
 
 body{
@@ -14,6 +13,9 @@ body{
 }
 .text_scroll {
   height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+  /* font-weight: 100; */
+  /* font-style: normal; */
   /* width: 90vw; */
   display: flex;
   flex-direction: column;
@@ -25,7 +27,7 @@ body{
 
 .wrapper {
   width: 90%;
-  height: 140px;
+  height: 40%;
   position: relative;
   overflow: hidden;
   mask-image: linear-gradient(
@@ -68,6 +70,7 @@ body{
   color: white;
   white-space: nowrap;
   position: absolute;
+  height: 90%;
   width: 100vw;
   text-align: center;
   animation-timing-function: linear;
@@ -104,6 +107,7 @@ body{
 .h1_port {
   color: white;
   font-size: 3vw;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   padding-block: 4rem;
 }
@@ -147,15 +151,17 @@ body{
 .my_text{
   color: white;
   font-size: 10vw;
-  font-weight: bold;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
   align-items: center;
 }
 
 
 /* SOCAIL--------- */
 .socail_inner{
+  font-family: 'Montserrat', sans-serif;
   width: 70vw;
   padding: .5rem;
   margin: 4rem auto;
@@ -213,6 +219,8 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: end;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 .col_C{
@@ -248,6 +256,8 @@ body{
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
+
 }
 
 .infoContainer{
@@ -292,6 +302,7 @@ body{
   align-items: end;
   color: white;
   font-size: 2vw;
+  font-family: 'Montserrat', sans-serif;
 }
 .footer_row img{
   width: 2rem;

@@ -653,7 +653,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
 }
 .about{

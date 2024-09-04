@@ -318,7 +318,7 @@ body{
     margin-top: -3vw;
 }
 .main-heading{
-    font-size: 5vw;
+    font-size: 10vw;
     line-height: 4vw;
     margin-bottom: 2vw;
 }
@@ -653,7 +653,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
+    font-family: Arial, sans-serif;
     color: white;
 }
 .about{
