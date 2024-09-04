@@ -324,7 +324,7 @@ body{
   opacity: 0.5;
 }
 
-#Cname1, Cname2, Cname3{
+#Cname1, #Cname2, #Cname3{
 
   margin: .5rem;
   }
