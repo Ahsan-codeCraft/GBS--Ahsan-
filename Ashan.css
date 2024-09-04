@@ -142,6 +142,7 @@ body{
 }
 /* ------TEXT ANIMATION---------- */
 .my_text{
+  overflow-x: hidden;
   color: white;
   font-size: 12vw;
   font-weight: 600;
@@ -149,6 +150,7 @@ body{
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   align-items: center;
+
 }
 
 
@@ -229,6 +231,7 @@ body{
   padding: 6vmax 2vw;
   color: white;
   width: 88%;
+  overflow-x: hidden;
 }
 .row1 p{
   font-size: 15vw;
