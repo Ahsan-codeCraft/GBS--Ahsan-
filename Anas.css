@@ -871,8 +871,13 @@ body{
     text-transform: uppercase;
 }
 @media (max-width: 500px) {
+    .section-7{
+        height: fit-content;
+    }
     .acheive{
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         gap: 4vw;
     }
     .card{
