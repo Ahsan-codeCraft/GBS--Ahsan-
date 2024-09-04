@@ -311,6 +311,10 @@ body{
         width: 12vw;
         margin-bottom: -0.7vw;
     }
+    .graySection{
+        height: 100vh;
+        transform: translateY(130vh);
+    }
 }
 
 
@@ -772,6 +776,7 @@ body{
     color: white;
     margin-top: 10vh;
     margin-bottom: 5vh;
+    height: fit-content;
 }
 .acheive{
     width: 100vw;
@@ -872,7 +877,8 @@ body{
 }
 @media (max-width: 500px) {
     .section-7{
-        height: fit-content;
+        overflow-x: hidden;
+        height: 150vh;
     }
     .acheive{
         flex-direction: column;
@@ -881,8 +887,8 @@ body{
         gap: 4vw;
     }
     .card{
-        width: 87vw;
-        height: 45vw;
+        width: 90vw;
+        height: 55vw;
         border-radius: 10px;
     }
     .right-acheive , .left-acheive{
@@ -906,13 +912,13 @@ body{
         padding-right: 4vw;
     }
     .numbers{
-        font-size: 12vw;
+        font-size: 15vw;
     }
     .plus{
-        font-size: 9vw;
+        font-size: 11vw;
     }
     .card-info{
-        font-size: 6vw;
+        font-size: 7vw;
     }
     .card-1{
         background-color: #c93202;
