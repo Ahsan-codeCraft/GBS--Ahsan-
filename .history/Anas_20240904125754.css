@@ -320,8 +320,8 @@ body{
 }
 .main-heading{
     font-size: 8vw;
-    /* line-height: 4vw; */
-    /* margin-bottom: 2vw; */
+    line-height: 4vw;
+    margin-bottom: 2vw;
 }
 .main-para{
     font-size: 0.85vw;

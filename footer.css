@@ -11,8 +11,9 @@
 .footer_wrapper {
     width: 100%;
     position: relative;
-    top: 20%;
+    top: 30%;
     overflow: hidden;
+    
 }
 
 .footer_scroll-content {
