@@ -408,7 +408,9 @@ body {
 /* -------- */
 @media (max-width:460px) {
 
-
+  .portfolio{
+    overflow: hidden;
+  }
   .image {
     display: none;
   }
