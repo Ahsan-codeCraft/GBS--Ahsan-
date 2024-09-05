@@ -22,7 +22,7 @@
     white-space: nowrap;
     padding: 0 6rem;
     letter-spacing: 1px;
-    animation: move-rti 6000ms linear infinite;
+    animation: move-rti 60000ms linear infinite;
   }
   .footer_cursor-light {
       position: absolute; /* Position relative to .text-wrapper */
