@@ -14,6 +14,8 @@
 </head>
 <body>
 
+  <div class="cursor-ball"></div>
+  <video src="anas-assets\intro-video.mp4" autoplay loop muted class="behind"></video>
     <!-- SECTION 01 (HEADER) -->
     <header id="header-1">
       <section class="section-1">
@@ -148,7 +150,6 @@
 
 
 
-
     <!--     SECTION 03      -->
     <section class="section-3">
       <!-- For extra space for video  -->
@@ -182,14 +183,14 @@
     <section class="section-5">
       <div class="serv-container">
         <div class="cont-1 contt">
-          <div class="content-cont">
+          <div class="content-cont content-cont-1">
             <h1 class="serv-h">Visa consultancy</h1>
             <div class="exp">Global Pathways, Simplified Journeys</div>
             <br />
             <div class="btn btn-1">View Details</div>
           </div>
           <img
-            src="anas-assets\gbs visa consultant.png"
+            src="anas-assets\plane.png"
             alt="visa"
             class="visa picc"
           />
@@ -208,7 +209,7 @@
           </div>
         </div>
         <div class="cont-3 contt">
-          <div class="content-cont">
+          <div class="content-cont content-cont-3">
             <h1 class="serv-h">Software Development</h1>
             <div class="exp">Innovative Solutions, Seamless Integration</div>
             <br />
@@ -222,7 +223,7 @@
         </div>
       </div>
     </section>
-    <div class="btn-parent"><div class="btn btn-s">View Details</div></div>
+    <div class="btn-parent"><div class="btn btn-s">View all Services</div></div>
 
 
 
@@ -239,8 +240,14 @@
     <!-- SECTION 06 -->
     <section class="section-6">
       <div class="about">
-        <h1 class="h-about h-about-1">Who</h1>
-        <h1 class="h-about h-about-2">We Are</h1>
+        <div class="heading-container">
+          <h1 class="h-about">Who</h1>
+          <div class="color-overlay"></div>
+      </div>
+      <div class="heading-container">
+        <h1 class="h-about">We are</h1>
+        <div class="color-overlay"></div>
+    </div>
         <div class="about-para">
           As an award-winning agency within the digital jungle, TRIONN® transcends aesthetics, crafting your vision into a legacy that endures.
         </div>
@@ -537,6 +544,56 @@
       }
         open.addEventListener('click',showMenu);
         close.addEventListener('click',hideMenu);
+
+
+
+
+
+
+
+
+//         document.addEventListener('mousemove', function(e) {
+//     const cursorBall = document.querySelector('.cursor-ball');
+    
+//     // Get the mouse position and move the ball
+//     cursorBall.style.left = `${e.clientX}px`;
+//     cursorBall.style.top = `${e.clientY}px`;
+// });
+
+const cursorBall = document.querySelector('.cursor-ball');
+let mouseX = 0, mouseY = 0;
+let ballX = 0, ballY = 0;
+const delay = 0.1; // Adjust this value for more or less delay
+
+document.addEventListener('mousemove', function(e) {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+
+// document.querySelectorAll('h1', '#menu-close').forEach(item => {
+//     item.addEventListener('mouseenter', () => {
+//         cursorBall.classList.add('large');
+//     });
+//     item.addEventListener('mouseleave', () => {
+//         cursorBall.classList.remove('large');
+//     });
+// });
+
+
+function animate() {
+    // Calculate the ball's position by interpolating towards the mouse position
+    ballX += (mouseX - ballX) * delay;
+    ballY += (mouseY - ballY) * delay;
+    
+    cursorBall.style.left = `${ballX}px`;
+    cursorBall.style.top = `${ballY}px`;
+    
+    requestAnimationFrame(animate);
+}
+
+animate();
+
         
         
 
@@ -590,14 +647,38 @@
 
 
 
-      gsap.to(".paraa-btn", {
+
+      gsap.timeline({
+            scrollTrigger: {
+                trigger: ".heading-container",
+                start: "top 80%",
+                end: "bottom 60%",
+                scrub: true,
+            }
+        })
+        .fromTo(".heading-container h1", 
+                {x: "-50%"}, 
+                {x: "0%", ease: "none"},
+                {opacity: 0})
+
+      gsap.to(".service-h", {
         scrollTrigger: {
           trigger: ".services",
           start: "top 50%",
-          end: "top 50%",
+          end: "10% 50%",
           scrub: true,
         }, 
-        y: "4vh",
+        x: 0,
+        opacity: 1,
+      });
+      gsap.to(".paraa-btn", {
+        scrollTrigger: {
+          trigger: ".services",
+          start: "15% 50%",
+          end: "25% 50%",
+          scrub: true,
+        }, 
+        y: "7vh",
         opacity: 1,
       });
       
@@ -681,6 +762,87 @@
 
 
 
+      gsap.to(".content-cont-1", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "0% 75%",
+          end: "20% 60%",
+          scrub: true,
+        },
+        y: "5vh" ,
+        opacity: 1,
+      });
+      gsap.to(".content-cont-2", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "30% 75%",
+          end: "50% 60%",
+          scrub: true,
+        },
+        y: "0vh" ,
+        opacity: 1,
+      });
+      gsap.to(".content-cont-3", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "60% 75%",
+          end: "80% 60%",
+          scrub: true,
+        },
+        y: "15vh" ,
+        opacity: 1,
+      });
+
+
+    
+      gsap.to(".visa", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "0% 90%",
+          end: "20% 60%",
+          scrub: true,
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+      gsap.to(".truck", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "30% 90%",
+          end: "50% 60%",
+          scrub: true,
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+      gsap.to(".software", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "60% 90%",
+          end: "80% 60%",
+          scrub: true,
+        },
+        x: 0 ,
+        rotate: 0,
+        opacity: 1,
+      });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -694,15 +856,34 @@
 
 
 
+      gsap.timeline({
+            scrollTrigger: {
+                trigger: ".heading-container",
+                start: "0% 80%",
+                end: "20% 60%",
+                scrub: true,
+            }
+        })
+        .fromTo(".heading-container h1", 
+                {x: "-100%"}, 
+                {x: "0%", ease: "none"})
 
 
-
-
-      gsap.to(".paraa-btn", {
+      gsap.to(".service-h", {
         scrollTrigger: {
           trigger: ".services",
           start: "top 75%",
-          end: "top 75%",
+          end: "10% 75%",
+          scrub: true,
+        }, 
+        x: 0,
+        opacity: 1,
+      });
+      gsap.to(".paraa-btn", {
+        scrollTrigger: {
+          trigger: ".services",
+          start: "15% 75%",
+          end: "20% 75%",
           scrub: true,
         }, 
         y: "4vh",
@@ -721,8 +902,8 @@
       gsap.to(".about-para-2", {
         scrollTrigger: {
           trigger: ".about-para-2",
-          start: "top 90%",
-          end: "top 100%",
+          start: "30% 90%",
+          end: "30% 100%",
           scrub: true,
         }, 
         y: "0vh",
@@ -731,8 +912,8 @@
       gsap.to(".a-btn", {
         scrollTrigger: {
           trigger: ".a-btn",
-          start: "top 95%",
-          end: "top 100%",
+          start: "30% 95%",
+          end: "30% 100%",
           scrub: true,
         }, 
         y: "0vh",
@@ -786,6 +967,83 @@
         opacity: 1,
       });
 
+
+
+      gsap.to(".content-cont-1", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "10% 75%",
+          end: "15% 60%",
+          scrub: true,
+        },
+        y: "0vh" ,
+        opacity: 1,
+      });
+      gsap.to(".content-cont-2", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "45% 75%",
+          end: "50% 60%",
+          scrub: true,
+        },
+        y: "0vh" ,
+        opacity: 1,
+      });
+      gsap.to(".content-cont-3", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "80% 75%",
+          end: "85% 60%",
+          scrub: true,
+        },
+        y: "0vh" ,
+        opacity: 1,
+      });
+
+
+    
+      gsap.to(".visa", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "0% 90%",
+          end: "10% 60%",
+          scrub: true,
+          
+        },
+        x: 0 ,
+        opacity: 1,
+      });
+      gsap.to(".truck", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "35% 90%",
+          end: "45% 60%",
+          scrub: true,
+        },
+        x: 0 ,
+        opacity: 1,
+      });
+      gsap.to(".software", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "65% 90%",
+          end: "80% 60%",
+          scrub: true,
+        },
+        x: 0 ,
+        opacity: 1,
+      });
+
+      gsap.to(".btn-s", {
+        scrollTrigger: {
+          trigger: ".serv-container",
+          start: "90% 90%",
+          end: "100% 60%",
+          scrub: true,
+        }, 
+        y: 0,
+        opacity: 1,
+      });
 
 
 

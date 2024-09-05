@@ -38,7 +38,17 @@ body{
         display: none;
     }
 }
-
+/* bg vid */
+.behind{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.05;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
 /*      SECTION-1 (Header-01)      */
 .section-1{
     margin-top: 5vh;
@@ -425,7 +435,7 @@ body{
     color: #222222;
 }
 .video{
-    width: 13vw;
+    width: 12.5vw;
     height: auto;
     border-radius: 70px;
     display: flex;
@@ -446,7 +456,7 @@ body{
     }
     .video{
         position: relative;
-        top: 45vw;
+        top: 50vw;
     }
     .video-in{
         transition: none; 
@@ -486,8 +496,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 .services{  
     display: flex;
@@ -500,21 +509,23 @@ body{
     display: flex;
     justify-content: left; 
     width: 90vw;
-    color: #222222;
-    
+    color: #c3e2ef;
+    transform: translateX(-20vw);
+    opacity: 0;
+    transition: all 0.3s linear;
 }
 .paraa-btn{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 87vw;
-    transform: translateY(10vh);
+    transform: translateY(20vh);
     transition: all 0.8s ease;
     opacity: 0;
 }
 .paraa{
     font-size: 2vw;
-    color: #9bbac8;
+    color: #e3f1f8;
 }   
 @media (max-width: 500px) {
     .section-4{
@@ -541,10 +552,9 @@ body{
 /*       SECTION 05     */
 .section-5{
     width: 100vw;
-    margin-top: 5vw;
+    margin-top: 15vw;
     display: flex;
     justify-content: center;
-    font-family: Arial, sans-serif;
     color: white;
 }
 .serv-container{
@@ -566,15 +576,42 @@ body{
     height: 31vw;
     border-radius: 1.5vw;
     background-size: cover;
-    filter: brightness(0.8);
 }
-.content-cont{
+.visa{
+    transform: translateX(30vw) rotate(25deg);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.truck{
+    transform: translateX(-30vw) rotate(-25deg);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.software{
+    transform: translateX(30vw) rotate(25deg);
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+.content-cont-3{
     gap: 5%;
     height: 40vh;
     display: flex;
-    justify-content: end;
     align-items: start;
     flex-direction: column;
+    transition: all 0.3s linear;
+    transform: translateY(30vh);
+    opacity: 0;
+}
+.content-cont-1{
+    gap: 5%;
+    height: 40vh;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    transform: translateY(30vh);
+    opacity: 0;
+    gap: 5%;
+    transition: all 0.3s linear;
 }
 .content-cont-2{
     gap: 3%;    
@@ -583,6 +620,9 @@ body{
     justify-content: center;
     align-items: end;
     flex-direction: column;
+    transform: translateY(30vh);
+    opacity: 0;
+    transition: all 0.3s linear;
 }
 .cont-2,.cont-3{
     margin-top: -5vw;
@@ -599,6 +639,7 @@ body{
 }
 .btn-1{
     width: 10vw;
+    margin-top: 2vw;
 }
 .btn-s{
     display: none;
@@ -608,14 +649,17 @@ body{
 }
 @media (max-width: 500px) {
     .section-5{
-        margin-top: 10vw;
         margin-bottom: -4vw;
+        overflow: hidden;
     }
     .cont-1{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column-reverse;
+    }
+    .serv-container{
+        margin-top: 15vh;
     }
     .picc{
         width: 80vw;
@@ -662,12 +706,29 @@ body{
         width: 22vw;
         height: 8vw;
         font-size: 2.3vw;
+        transform: translateY(10vh);
+        opacity: 0;
     }
     .btn-parent{
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100vw;
+    }
+    .visa{
+        transform: translateX(100vw);
+        opacity: 0;
+        transition: all 0.3s linear;
+    }
+    .truck{
+        transform: translateX(-100vw);
+        opacity: 0;
+        transition: all 0.3s linear;
+    }
+    .software{
+        transform: translateX(100vw);
+        opacity: 0;
+        transition: all 0.3s linear;
     }
 }
 
@@ -686,16 +747,21 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    color: white;
+    
 }
 .about{
     width: 86vw;
+}
+.heading-container{
+    transition: all 0.3s ease;
 }
 .h-about{
     font-size: 9vw;
     text-transform: uppercase;
     letter-spacing: -0.5vw;
     line-height: 8vw;
+    color: #c3e2ef;
+    transition: all 0.3s ease;
 }
 .about-para{
     width: 50vw;
@@ -706,6 +772,7 @@ body{
     transform: translateY(10vh);
     transition: all 0.8s ease;
     opacity: 0;
+    color: #e3f1f8;
 }
 .about-para-r{
     width: 84vw;
@@ -715,6 +782,7 @@ body{
     justify-content: center;
     align-items: end;
     flex-direction: column;
+    color: #e3f1f8;
 }
 .about-para-2{
     transform: translateY(5vh);
@@ -945,3 +1013,32 @@ body{
         opacity: 0;
     }
 }
+
+
+
+
+/*     CURSER     */
+.cursor-ball {
+    position: fixed;
+    width: 20px; /* Size of the small ball */
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00b3ff; /* Color of the small ball */
+    pointer-events: none; /* Ensure the ball doesn't interfere with clicking */
+    transition: transform 0.1s ease-out, width 0.5s ease, height 0.5s ease; /* Smooth movement */
+    z-index: 9999; /* Ensure it's above other elements */
+    transform: translate(-50%, -50%); /* Center the ball on the cursor */
+    /* mix-blend-mode: difference; */
+    
+}
+.cursor-ball.large {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    box-shadow: #00b3ff 20px 20px 20px 35px, #00b3ff 20px 20px 20px 35px;
+}
+@media (max-width:500px) {
+    .cursor-ball{
+        display: none;
+    }
+}
+
