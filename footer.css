@@ -63,10 +63,11 @@
 @media (max-width: 460px) {
     .footer_text_scroll {
         height: 40vh; /* Adjust the height for smaller screens */
+        width: 100vw;
     }
     
     .footer_itemLeft {
-        font-size: 50vw; /* Increase font size to make text more visible */
+        font-size: 45vw; /* Increase font size to make text more visible */
         padding: 0 1rem; /* Adjust padding */
     }
 
