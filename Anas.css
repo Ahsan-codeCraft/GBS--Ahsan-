@@ -578,20 +578,17 @@ body{
     background-size: cover;
 }
 .visa{
-    transform: translateX(30vw) rotate(75deg);
-    transform-origin: center right;
+    transform: translateX(30vw) rotate(25deg);
     opacity: 0;
     transition: all 0.3s linear;
 }
 .truck{
-    transform: translateX(-30vw) rotate(-75deg);
-    transform-origin: center left;
+    transform: translateX(-30vw) rotate(-25deg);
     opacity: 0;
     transition: all 0.3s linear;
 }
 .software{
-    transform: translateX(30vw) rotate(75deg);
-    transform-origin: center right;
+    transform: translateX(30vw) rotate(25deg);
     opacity: 0;
     transition: all 0.3s linear;
 }
@@ -755,12 +752,16 @@ body{
 .about{
     width: 86vw;
 }
+.heading-container{
+    transition: all 0.3s ease;
+}
 .h-about{
     font-size: 9vw;
     text-transform: uppercase;
     letter-spacing: -0.5vw;
     line-height: 8vw;
     color: #c3e2ef;
+    transition: all 0.3s ease;
 }
 .about-para{
     width: 50vw;

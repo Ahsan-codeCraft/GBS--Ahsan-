@@ -659,8 +659,9 @@ animate();
             }
         })
         .fromTo(".heading-container h1", 
-                {x: "-100%"}, 
-                {x: "0%", ease: "none"})
+                {x: "-50%"}, 
+                {x: "0%", ease: "none"},
+                {opacity: 0})
 
       gsap.to(".service-h", {
         scrollTrigger: {
