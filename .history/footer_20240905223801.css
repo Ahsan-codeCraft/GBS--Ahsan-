@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .text-wrapper{
+    position: relative; /* Make sure this is set */
+    display: flex;
+    justify-content: flex-start;
+    background: black;
+    color: white;
+    overflow: hidden;
+    padding-bloc: 6rem;
+  }
+  .text-wrapper h1{
+    font-size: 20vw;
+    background: linear-gradient(12deg, black 60%, white 40%);
+    background-size: 10px 10px;
+    -webkit-background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move-rti 60000ms linear infinite;
+  }
+  .footer_cursor-light {
+      position: absolute; /* Position relative to .text-wrapper */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at var(--x) var(--y), transparent 10%, rgba(0, 0, 0, 0.85) 20%);
+    z-index: 1;
+  }
+  
+  @keyframes move-rti {
+  
+    0%{
+      transform: translateX(0);
+    }
+    100%{
+      transform: translateX(-100%);
+    }
+  }

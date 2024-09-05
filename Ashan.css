@@ -170,10 +170,22 @@ body {
   background-position: center;
   width: 100%;
   border-radius: 1rem;
-  /* margin-block: 2rem; */
-  /* z-index: 999; */
 }
-
+.forMobile{
+  padding-block: 2rem;
+  text-align: center;
+}
+.forMobile a{
+  display: none;
+  text-decoration: none;
+  color: skyblue;
+  font-size: 2vw;
+  background: transparent;
+  border: 2px solid skyblue;
+  padding: .5rem 1rem;
+  border-radius: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
 /* ------TEXT ANIMATION---------- */
 .my_text {
   overflow-x: hidden;
@@ -360,9 +372,6 @@ body {
   /* border: 1px solid white; */
 }
 
-
-
-
 /* ------------------ */
 #footer-01 {
 
@@ -404,7 +413,17 @@ body {
   .imaged {
     width: 80%;
   }
-
+  .forMobile a{
+    display: block;
+    width: 30vw;
+    margin: 0 auto;
+  }  
+  .content_h1, .content_p{
+    display: none;
+  }
+  .port_content button{
+    display: none;
+  }
   .infoContainer {
     flex-direction: column;
     gap: 2rem;
