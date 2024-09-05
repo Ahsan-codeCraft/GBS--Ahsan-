@@ -435,7 +435,7 @@ body{
     color: #222222;
 }
 .video{
-    width: 13vw;
+    width: 12.5vw;
     height: auto;
     border-radius: 70px;
     display: flex;
@@ -1019,8 +1019,8 @@ body{
 /*     CURSER     */
 .cursor-ball {
     position: fixed;
-    width: 15px; /* Size of the small ball */
-    height: 15px;
+    width: 20px; /* Size of the small ball */
+    height: 20px;
     border-radius: 50%;
     background-color: #00b3ff; /* Color of the small ball */
     pointer-events: none; /* Ensure the ball doesn't interfere with clicking */
