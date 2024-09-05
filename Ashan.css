@@ -175,6 +175,8 @@ body {
 .forMobile{
   padding-block: 2rem;
   text-align: center;
+  width: 100vw;
+  overflowX: hidden;
 }
 .forMobile a{
   display: none;
