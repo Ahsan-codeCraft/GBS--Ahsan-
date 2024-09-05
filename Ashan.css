@@ -8,9 +8,10 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: black;
 }
+
 .text_scroll {
   height: 100vh;
   font-family: "Noto Sans JP", sans-serif;
@@ -27,21 +28,20 @@ body{
   height: 27%;
   position: relative;
   overflow: hidden;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-    );
-    display: flex;
-    align-items: center;
-  }
-  
-  @keyframes scrollLeft {
+  mask-image: linear-gradient(to right,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 1) 80%,
+      rgba(0, 0, 0, 0));
+  display: flex;
+  align-items: center;
+}
+
+@keyframes scrollLeft {
   from {
     transform: translateX(100%);
   }
+
   to {
     transform: translateX(-100%);
   }
@@ -51,6 +51,7 @@ body{
   from {
     transform: translateX(-100%);
   }
+
   to {
     transform: translateX(100%);
   }
@@ -96,25 +97,17 @@ body{
   animation-delay: -45s;
 }
 
-.h1_port {
-  color: white;
-  font-size: 3vw;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  padding-block: 4rem;
-}
 .portfolio {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-block: 4rem;
-  overflow-x: hidden;
+  margin-block: 2rem;
+  overflow: hidden;
 }
 
 .inner_portfolio {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
   width: 80%;
 }
 
@@ -123,6 +116,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-block: 2rem;
 }
 
 .image,
@@ -133,15 +127,55 @@ body{
   overflow: hidden;
 }
 
+.port_content {
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+}
+
+.port_content * {
+  padding: .5rem;
+}
+
+.content_h1 {
+  font-size: 2rem;
+  font-family: cursive;
+  color: #FF1F86;
+  /* text-align: center; */
+}
+
+.content_p {
+  color: white;
+  text-align: center;
+  color: skyblue;
+  font-size: 1.2rem;
+  font-family: "Noto Sans JP", sans-serif;
+
+}
+
+.port_content button {
+  border-radius: 2rem;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: skyblue;
+  border: 4px solid skyblue;
+  background: transparent;
+}
+
 .image img,
 .imaged img {
   background-size: cover;
   background-position: center;
   width: 100%;
   border-radius: 1rem;
+  /* margin-block: 2rem; */
+  /* z-index: 999; */
 }
+
 /* ------TEXT ANIMATION---------- */
-.my_text{
+.my_text {
   overflow-x: hidden;
   color: white;
   font-size: 12vw;
@@ -155,7 +189,7 @@ body{
 
 
 /* SOCAIL--------- */
-.socail_inner{
+.socail_inner {
   font-family: 'Montserrat', sans-serif;
   width: 70vw;
   padding: .5rem;
@@ -165,14 +199,18 @@ body{
   justify-content: center;
   cursor: pointer;
 }
-.socail_item img{
+
+.socail_item img {
   width: 5vw;
   transition: 1s ease;
 }
+
 .socail_item:hover img {
-  transform: rotate(360deg); /* Rotate only the image 360 degrees */
+  transform: rotate(360deg);
+  /* Rotate only the image 360 degrees */
 }
-.socail_item{
+
+.socail_item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -180,14 +218,16 @@ body{
 
 
 
-.myHover_s{
+.myHover_s {
   transition: 1s;
-  
+
 }
-.myHover_s:hover{
+
+.myHover_s:hover {
   transform: scale(1.2);
 }
-.socail_inner p{
+
+.socail_inner p {
   color: #D8D9DA;
   padding-block: 1rem;
   font-size: 4vw;
@@ -198,7 +238,8 @@ body{
   width: 100%;
   overflow: hidden;
 }
-#tiktok-2{
+
+#tiktok-2 {
 
   width: 5.2vw;
   border-radius: 50%;
@@ -215,7 +256,7 @@ body{
 }
 
 /* -----CONTACT---------- */
-.row1{
+.row1 {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -223,7 +264,7 @@ body{
   font-weight: bold;
 }
 
-.col_C{
+.col_C {
   display: flex;
   flex-direction: column;
   /* justify-content: space-between; */
@@ -233,12 +274,14 @@ body{
   width: 88%;
   overflow-x: hidden;
 }
-.row1 p{
+
+.row1 p {
   font-size: 15vw;
   font-weight: 400;
   line-height: .8;
 }
-.col_C a{
+
+.col_C a {
   width: 13.5%;
   text-align: center;
   margin-left: auto;
@@ -251,7 +294,7 @@ body{
 }
 
 /* info----- */
-.info{
+.info {
 
   display: flex;
   flex-direction: column;
@@ -261,38 +304,42 @@ body{
 
 }
 
-.infoContainer{
+.infoContainer {
   color: white;
   width: 80%;
   display: flex;
   justify-content: space-between;
   margin-block: 2rem;
-  transition: transform  .5s;
+  transition: transform .5s;
 }
-.info_h{
+
+.info_h {
   font-size: 1.5vw;
   font-weight: 400;
 }
-.info_t{
+
+.info_t {
   font-size: 2.5vw;
   font-size: 2vw;
-  font-weight:400;
+  font-weight: 400;
   transition: transform .8s;
 }
-.info_t:hover{
+
+.info_t:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
-#my_hr0, #my_hr{
+
+#my_hr0,
+#my_hr {
   width: 80%;
 }
-@media (max-width:460px) {
-  
-}
+
+@media (max-width:460px) {}
 
 /* --Footer--- */
 
-.footer_row{
+.footer_row {
   width: 80vw;
   padding: 2rem;
   margin-top: 4rem;
@@ -305,7 +352,8 @@ body{
   font-size: 2vw;
   font-family: 'Montserrat', sans-serif;
 }
-.footer_row img{
+
+.footer_row img {
   width: 2rem;
   border: 1px solid white;
   border-radius: 50%;
@@ -316,12 +364,13 @@ body{
 
 
 /* ------------------ */
-#footer-01{
+#footer-01 {
 
   background: black;
 
 }
-.footer_row1{
+
+.footer_row1 {
   height: 100vh;
   padding: 0;
   display: flex;
@@ -332,51 +381,62 @@ body{
   font-weight: bold;
   color: white;
 }
-.footer_row1 p{
+
+.footer_row1 p {
   opacity: 0.5;
 }
 
-#Cname1, #Cname2, #Cname3{
+#Cname1,
+#Cname2,
+#Cname3 {
 
   margin: .5rem;
+}
+
+/* -------- */
+@media (max-width:460px) {
+
+
+  .image {
+    display: none;
   }
-  /* -------- */
-  @media (max-width:460px) {
-  
 
-    .image{
-      display: none;
-    }
-    .imaged{
-      width: 80%;
-    }
+  .imaged {
+    width: 80%;
+  }
 
-  .infoContainer{
+  .infoContainer {
     flex-direction: column;
     gap: 2rem;
     margin-left: 10vw;
-  }  
-  .info{
+  }
+
+  .info {
     display: flex;
     flex-direction: column;
-  }  
-  .wrapper{
+  }
+
+  .wrapper {
     height: 15%;
   }
-  .text_scroll{
+
+  .text_scroll {
     height: 70vh;
     gap: 0;
   }
-  .row1{
+
+  .row1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .col_C{
+
+  .col_C {
     padding-right: 10vw;
     align-items: center;
   }
-  .col_C a{
+
+  .col_C a {
     width: 50%;
     text-align: center;
     margin: 2vh auto;
@@ -387,10 +447,11 @@ body{
     padding: 1vmax 2vmax;
     border-radius: 2rem;
   }
-  
-  .footer_row1{
-    height: 100vh;
-  }  
 
+  .footer_row1 {
+    height: 100vh;
   }
-  /* ----------- */
+
+}
+
+/* ----------- */
