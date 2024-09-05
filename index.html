@@ -648,6 +648,20 @@ animate();
       });
 
 
+
+
+      gsap.timeline({
+            scrollTrigger: {
+                trigger: ".heading-container",
+                start: "top 80%",
+                end: "bottom 60%",
+                scrub: true,
+            }
+        })
+        .fromTo(".heading-container h1", 
+                {x: "-100%"}, 
+                {x: "0%", ease: "none"})
+
       gsap.to(".service-h", {
         scrollTrigger: {
           trigger: ".services",
@@ -843,7 +857,17 @@ animate();
 
 
 
-
+      gsap.timeline({
+            scrollTrigger: {
+                trigger: ".heading-container",
+                start: "0% 80%",
+                end: "20% 60%",
+                scrub: true,
+            }
+        })
+        .fromTo(".heading-container h1", 
+                {x: "-100%"}, 
+                {x: "0%", ease: "none"})
 
 
       gsap.to(".service-h", {
