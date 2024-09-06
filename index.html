@@ -765,7 +765,7 @@ gsap.to(".service-h", {
           end: "20% 60%",
           scrub: true,
         },
-        y: "5vh" ,
+        y: "0vh" ,
         opacity: 1,
       });
       gsap.to(".content-cont-2", {
@@ -785,7 +785,7 @@ gsap.to(".service-h", {
           end: "80% 60%",
           scrub: true,
         },
-        y: "15vh" ,
+        y: "10vh" ,
         opacity: 1,
       });
 
@@ -885,30 +885,6 @@ gsap.to(".h-about", {
 
 
 
-
-      gsap.timeline({
-            scrollTrigger: {
-                trigger: ".heading-container",
-                start: "0% 80%",
-                end: "20% 60%",
-                scrub: true,
-            }
-        })
-        .fromTo(".heading-container h1", 
-                {x: "-100%"}, 
-                {x: "0%", ease: "none"})
-
-
-      gsap.to(".service-h", {
-        scrollTrigger: {
-          trigger: ".services",
-          start: "top 75%",
-          end: "10% 75%",
-          scrub: true,
-        }, 
-        x: 0,
-        opacity: 1,
-      });
       gsap.to(".paraa-btn", {
         scrollTrigger: {
           trigger: ".services",
@@ -1074,6 +1050,74 @@ gsap.to(".h-about", {
         y: 0,
         opacity: 1,
       });
+
+
+
+      
+      gsap.to(".h-about", {
+      scrollTrigger: {
+        trigger: ".section-6",
+        start: "0% 80%",
+        end: "20% 40%",
+        scrub: true,
+      },
+      x: 0,
+    });
+gsap.to(".h-about", {
+  scrollTrigger: {
+    trigger: ".section-6",
+    start: "0% 100%",
+    end: "20% 30%",
+    scrub: true,
+  },
+  background: "linear-gradient(to right, #c3e2ef 100%, #222222 0%)",
+  onUpdate: function() {
+    document.getElementById("h-about").style.webkitBackgroundClip = "text";
+    document.getElementById("h-about").style.backgroundClip = "text";
+    document.getElementById("h-about").style.webkitTextFillColor = "transparent";
+    document.getElementById("h-about").style.color = "transparent";
+    document.getElementById("h-about-1").style.webkitBackgroundClip = "text";
+    document.getElementById("h-about-1").style.backgroundClip = "text";
+    document.getElementById("h-about-1").style.webkitTextFillColor = "transparent";
+    document.getElementById("h-about-1").style.color = "transparent";
+},
+});
+
+
+
+
+
+
+gsap.to(".service-h", {
+      scrollTrigger: {
+        trigger: ".section-4",
+        start: "0% 80%",
+        end: "20% 50%",
+        scrub: true,
+      },
+      x: 0,
+    });
+gsap.to(".service-h", {
+  scrollTrigger: {
+    trigger: ".section-4",
+    start: "0% 90%",
+    end: "20% 40%",
+    scrub: true,
+  },
+  background: "linear-gradient(to right, #c3e2ef 100%, #222222 0%)",
+  onUpdate: function() {
+    document.getElementById("service-h").style.webkitBackgroundClip = "text";
+    document.getElementById("service-h").style.backgroundClip = "text";
+    document.getElementById("service-h").style.webkitTextFillColor = "transparent";
+    document.getElementById("service-h").style.color = "transparent";
+},
+});
+
+
+
+
+
+
 
 
 
