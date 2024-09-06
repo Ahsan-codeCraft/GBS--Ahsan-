@@ -44,8 +44,8 @@ gsap.to('.image1',
     {
         scrollTrigger: {
             trigger: '.image1',
-            start: 'top 70%',
-            end: 'top -20%',
+            start: 'top 40%',
+            end: 'top -40%',
             scrub: 1,
             onEnter: () => {
                 port_text.style.transition = 'transform 1000ms';
@@ -61,9 +61,8 @@ gsap.to('.image1',
             scrollTrigger: {
                 trigger: '.image2',
                 start: 'top 90%',
-                end: 'top -20%',
+                end: 'top -40%',
                 scrub: 1,
-
                   onEnter: () => {
                     port_text.style.transition = 'transform 1000ms';
                 },
@@ -73,29 +72,12 @@ gsap.to('.image1',
             x: -400,
         })
 
-        tl.to('.image3',
-            {
-                scrollTrigger: {
-                    trigger: '.image3',
-                    start: 'top 90%',
-                    end: 'top -20%',
-                    scrub: 1,
-    
-                    onEnter: () => {
-                        port_text.style.transition = 'transform 1000ms';
-                    },
-                },
-                duration: 2,
-                rotation: -30,
-                x: -400,
-            })
-
     gsap.to('.image4',
         {
             scrollTrigger: {
             trigger: '.image4',
-            start: 'top 70%',
-            end: 'top -20%',
+            start: 'top 40%',
+            end: 'top -40%',
             scrub: 1,
             onEnter: () => {
                 port_text.style.transition = 'transform 1000ms';
@@ -110,7 +92,7 @@ gsap.to('.image1',
             scrollTrigger: {
             trigger: '.image5',
             start: 'top 90%',
-            end: 'top -20%',
+            end: 'top -40%',
             scrub: 1,
             onEnter: () => {
                 port_text.style.transition = 'transform 1000ms';
@@ -126,9 +108,8 @@ gsap.to('.image1',
             scrollTrigger: {
                 trigger: '.image6',
                 start: 'top 90%',
-                end: 'top -20%',
+                end: 'top -40%',
                 scrub: 1,
-
                   onEnter: () => {
                     port_text.style.transition = 'transform 1000ms';
                 },
@@ -172,6 +153,21 @@ gsap.to('.image1',
 
     
 
+tl.to('.image3',
+    {
+        scrollTrigger: {
+            trigger: '.image3',
+            start: 'top 90%',
+            end: 'top -40%',
+            scrub: 1,
+            onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
+        },
+        duration: 2,
+        rotation: -30,
+        x: -400,
+    })
 
 
 

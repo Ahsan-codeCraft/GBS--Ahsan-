@@ -44,7 +44,7 @@ gsap.to('.image1',
     {
         scrollTrigger: {
             trigger: '.image1',
-            start: 'top 70%',
+            start: 'top 40%',
             end: 'top -20%',
             scrub: 1,
             onEnter: () => {
@@ -63,7 +63,6 @@ gsap.to('.image1',
                 start: 'top 90%',
                 end: 'top -20%',
                 scrub: 1,
-
                   onEnter: () => {
                     port_text.style.transition = 'transform 1000ms';
                 },
@@ -80,7 +79,6 @@ gsap.to('.image1',
                     start: 'top 90%',
                     end: 'top -20%',
                     scrub: 1,
-    
                     onEnter: () => {
                         port_text.style.transition = 'transform 1000ms';
                     },
@@ -94,7 +92,7 @@ gsap.to('.image1',
         {
             scrollTrigger: {
             trigger: '.image4',
-            start: 'top 70%',
+            start: 'top 90%',
             end: 'top -20%',
             scrub: 1,
             onEnter: () => {
@@ -128,7 +126,6 @@ gsap.to('.image1',
                 start: 'top 90%',
                 end: 'top -20%',
                 scrub: 1,
-
                   onEnter: () => {
                     port_text.style.transition = 'transform 1000ms';
                 },
