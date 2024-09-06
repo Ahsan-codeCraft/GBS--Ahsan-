@@ -85,7 +85,7 @@ gsap.to('.image4',
         },
         duration: .8,
         opacity: 0,
-        y: 150,
+        y: 50,
     });
     
 
