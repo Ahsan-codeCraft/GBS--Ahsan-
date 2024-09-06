@@ -253,7 +253,7 @@ setInterval(createMeteor, 600);
 gsap.from('#timeTo', {
     scrollTrigger: {
         trigger: '#timeTo',
-        start: 'top 100%',
+        start: 'top 120%',
         end: 'top 60%',
         scrub: 1,
         ease: "power2.out",

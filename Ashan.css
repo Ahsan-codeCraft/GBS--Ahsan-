@@ -188,7 +188,9 @@ body {
   text-align: center;
   text-decoration: none;
   color: skyblue;
-  font-size: 2vw;
+  padding: .7rem 1rem;
+  font-weight: bold;
+  font-size: 1.2vw;
   background: transparent;
   border: 2px solid skyblue;
   border-radius: 1rem;
