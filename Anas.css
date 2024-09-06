@@ -510,15 +510,25 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+.service-outt{
+    width: 89vw;
+}
 .service-h{
     font-size: 10vw;
     display: flex;
     justify-content: left; 
     width: 90vw;
-    color: #c3e2ef;
-    transform: translateX(-20vw);
-    opacity: 0;
-    transition: all 0.3s linear;
+    font-size: 9vw;
+    line-height: 8vw;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #222222, #222222); /* The gradient background */
+    -webkit-background-clip: text; /* Apply the background to the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(13vw);
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.4s linear;
 }
 .paraa-btn{
     display: flex;
@@ -586,17 +596,14 @@ body{
 .visa{
     transform: translateX(30vw) rotate(25deg);
     opacity: 0;
-    transition: all 0.3s linear;
 }
 .truck{
     transform: translateX(-30vw) rotate(-25deg);
     opacity: 0;
-    transition: all 0.3s linear;
 }
 .software{
     transform: translateX(30vw) rotate(25deg);
     opacity: 0;
-    transition: all 0.3s linear;
 }
 .content-cont-3{
     gap: 5%;
@@ -750,10 +757,9 @@ body{
     width: 100vw;
     margin-top: 30vh;
     display: flex;
-    justify-content: center;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    
+    flex-direction: column;
 }
 .about{
     width: 86vw;
@@ -763,11 +769,19 @@ body{
 }
 .h-about{
     font-size: 9vw;
-    text-transform: uppercase;
-    letter-spacing: -0.5vw;
     line-height: 8vw;
-    color: #c3e2ef;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #222222, #222222); /* The gradient background */
+    -webkit-background-clip: text; /* Apply the background to the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(15vw);
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.4s linear;
+}
+.para-outt{
+    width: 86vw;
 }
 .about-para{
     width: 50vw;
@@ -1029,18 +1043,13 @@ body{
     width: 20px; /* Size of the small ball */
     height: 20px;
     border-radius: 50%;
-    background-color: #00b3ff; /* Color of the small ball */
+    background-color: #c3e2ef; /* Color of the small ball */
     pointer-events: none; /* Ensure the ball doesn't interfere with clicking */
     transition: transform 0.1s ease-out, width 0.5s ease, height 0.5s ease; /* Smooth movement */
     z-index: 9999; /* Ensure it's above other elements */
     transform: translate(-50%, -50%); /* Center the ball on the cursor */
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
     
-}
-.cursor-ball.large {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
-    box-shadow: #00b3ff 20px 20px 20px 35px, #00b3ff 20px 20px 20px 35px;
 }
 @media (max-width:500px) {
     .cursor-ball{
