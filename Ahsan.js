@@ -47,7 +47,9 @@ gsap.to('.image1',
             start: 'top 40%',
             end: 'top -40%',
             scrub: 1,
-
+             onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
         },
         duration: 2,
         rotation: -30,
@@ -61,7 +63,9 @@ gsap.to('.image4',
             start: 'top 40%',
             end: 'top -40%',
             scrub: 1,
-
+             onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
         },
         duration: 2,
         rotation: 30,
@@ -104,7 +108,9 @@ tl.to('.image2',
             start: 'top 90%',
             end: 'top -40%',
             scrub: 1,
-
+              onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
         },
         delay: 1,
         duration: 2,
@@ -119,7 +125,9 @@ tl.to('.image5',
             start: 'top 60%',
             end: 'top -40%',
             scrub: 1,
-
+              onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
         },
         delay: 1,
         duration: 2,
@@ -134,7 +142,9 @@ tl.to('.image3',
             start: 'top 90%',
             end: 'top -40%',
             scrub: 1,
-
+            onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
         },
         delay: 1,
         duration: 2,
@@ -150,7 +160,9 @@ tl.to('.image6',
             start: 'top 90%',
             end: 'top -40%',
             scrub: 1,
-
+              onEnter: () => {
+                port_text.style.transition = 'transform 1000ms';
+            },
         },
         delay: 1,
         duration: 2,
