@@ -5,6 +5,20 @@ gsap.registerPlugin(ScrollTrigger);
 tl = gsap.timeline();
 
 // ----------PORTFOLIO----------
+
+tl.from('.h1_port', {
+    scrollTrigger: {
+        trigger: '.h1_port',
+        start: 'top 70%',
+        end: 'top 50%',
+        scrub: 1,
+        ease: "power2.out", // Adding easing for smoothness
+    },
+    filter: "blur(5px)",
+    opacity: 0,  
+    duration: 1, 
+});
+
 gsap.from('#fM', {
     scrollTrigger: {
         trigger: '#fM',
@@ -242,6 +256,7 @@ gsap.from('#timeTo', {
         start: 'top 100%',
         end: 'top 60%',
         scrub: 1,
+        ease: "power3.inout",
     },
     filter: "blur(5px)",
     opacity: 0,
@@ -255,6 +270,7 @@ gsap.from('#roar', {
         start: 'top 100%',
         end: 'top 60%',
         scrub: 1,
+        ease: "power2.out",
     },
     filter: "blur(5px)",
     opacity: 0,

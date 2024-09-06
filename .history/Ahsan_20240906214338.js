@@ -5,6 +5,20 @@ gsap.registerPlugin(ScrollTrigger);
 tl = gsap.timeline();
 
 // ----------PORTFOLIO----------
+
+tl.from('.h1_port', {
+    scrollTrigger: {
+        trigger: '.h1_port',
+        start: 'top 70%',
+        end: 'top 50%',
+        scrub: 1,
+        ease: "power2.out", // Adding easing for smoothness
+    },
+    filter: "blur(5px)",
+    opacity: 0,  
+    duration: 1, 
+});
+
 gsap.from('#fM', {
     scrollTrigger: {
         trigger: '#fM',
