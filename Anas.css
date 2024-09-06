@@ -19,8 +19,13 @@ body{
     overflow-x: hidden;
     background-color: #121315;
     scroll-behavior: smooth;
-
+    
 }
+
+::selection { 
+    color: #70b4d1;
+    background: transparent;
+  } 
 
 ::-webkit-scrollbar {
     width: 0;
@@ -378,9 +383,11 @@ body{
     font-family: var(--PrimaryFont) !important;
 }
 .main-para{
-    font-size: 2vw;
-    font-family: var(--PrimaryFont) !important;
-    line-height: 1.5vw;
+    font-size: 1.5vw;
+    /* font-family: var(--PrimaryFont) !important; */
+    line-height: 1.8vw;
+    text-transform: none;
+    font-weight: 300;
 }
 .arrow-down{
     width: 1.5vw;
@@ -553,6 +560,7 @@ body{
 .paraa{
     font-size: 2vw;
     color: #e3f1f8;
+    font-weight: 300;
 }   
 @media (max-width: 500px) {
     .section-4{
@@ -656,7 +664,7 @@ body{
     margin-top: -5vw;
 }
 .serv-h{
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     word-spacing: 0.3vw;
     text-transform: uppercase;
     font-family: "Gurajada", sans-serif;
@@ -665,7 +673,7 @@ body{
 .exp{
     font-size: 1.1vw;
     text-transform: capitalize;
-    margin-top: -2vw;
+    margin-top: -3.2vw;
 }
 .btn-1{
     width: 10vw;
@@ -802,15 +810,16 @@ body{
     width: 86vw;
 }
 .about-para{
-    width: 50vw;
+    width: 48vw;
     height: fit-content;
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin-top: 3vw;
     margin-left: 1vw;
     transform: translateY(10vh);
     transition: all 0.8s ease;
     opacity: 0;
     color: #e3f1f8;
+    font-weight: 300;
 }
 .about-para-r{
     width: 84vw;
