@@ -75,7 +75,7 @@ gsap.to('.image4',
     gsap.from('.port_content', {
         scrollTrigger: {
             trigger: '.port_content',
-            start: 'top 30%',
+            start: 'top 40%',
             end: 'top 10%',
             scrub: 1,
             onEnter: () => {
