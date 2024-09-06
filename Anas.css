@@ -4,6 +4,15 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    /* fonts */
+    --PrimaryFont: "Gurajada", sans-serif; 
+
+    /* colors */
+    --PrimaryColor: #70b4d1; 
+}
+
+
 body{
     margin: 0;
     padding: 0;
@@ -364,18 +373,18 @@ body{
     line-height: 5vw;
     margin-bottom: 2vw;
     font-weight: 400;
-    font-family: "Gurajada", sans-serif;
+    font-family: var(--PrimaryFont) !important;
 }
 .main-para{
     font-size: 2vw;
-    font-family: "Gurajada", sans-serif;
+    font-family: var(--PrimaryFont) !important;
     line-height: 1.5vw;
 }
 .arrow-down{
     width: 1.5vw;
     height: 1.5vw;
     border-radius: 50%;
-    border: 0.13vw solid #70b4d1;
+    border: 0.13vw solid var(--PrimaryColor);
     display: flex;
     justify-content: center;
     align-items: center;
