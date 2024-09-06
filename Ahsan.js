@@ -80,9 +80,10 @@ gsap.to('.image4',
             scrub: 1,
             onEnter: () => {
                 port_text.style.display = 'flex';
+                port_text.style.transition = 'transform 1s';
             },
         },
-        duration: 1.5,
+        duration: .8,
         opacity: 0,
         y: 150,
     });
