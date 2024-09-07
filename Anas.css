@@ -1,19 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
-@import url('https://fonts.cdnfonts.com/css/dirtyline-36daysoftype-2022');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
+:root{
+    /* fonts */
+    --PrimaryFont: "Gurajada", sans-serif; 
+
+    /* colors */
+    --PrimaryColor: #70b4d1; 
+}
+
+
 body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     background-color: #121315;
+    scroll-behavior: smooth;
+    
 }
+
+::selection { 
+    color: #70b4d1;
+    background: transparent;
+  } 
 
 ::-webkit-scrollbar {
     width: 0;
@@ -346,8 +358,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
+    color: #e0eeee;
 }
 .main{
     height: 55vh;
@@ -365,19 +376,24 @@ body{
     margin-top: -3vw;
 }
 .main-heading{
-    font-size: 7.5vw;
-    line-height: 6.5vw;
-    margin-bottom: 1vw;
+    font-size: 8.5vw;
+    line-height: 5vw;
+    margin-bottom: 2vw;
     font-weight: 400;
+    font-family: var(--PrimaryFont) !important;
 }
 .main-para{
     font-size: 1.5vw;
+    /* font-family: var(--PrimaryFont) !important; */
+    line-height: 1.8vw;
+    text-transform: none;
+    font-weight: 300;
 }
 .arrow-down{
     width: 1.5vw;
     height: 1.5vw;
     border-radius: 50%;
-    border: 0.13vw solid #70b4d1;
+    border: 0.13vw solid var(--PrimaryColor);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -389,8 +405,8 @@ body{
 }
 @media (max-width: 500px) {
     .main-heading{
-        font-size: 9vw;
-        width: 65vw;
+        font-size: 12vw;
+        width: 90vw;
         line-height: 8vw;
     }
     .main{
@@ -400,8 +416,9 @@ body{
         height: 82vh;
     }
     .main-para{
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         margin-top: 3vw;
+        line-height: 2.8vw;
     }
     .arrow-down{
         height: 5vw;
@@ -424,9 +441,9 @@ body{
 .btn{
     width: 10.8vw;
     height: 4vw;
-    border: 0.16vw solid #70b4d1;
+    border: 0.16vw solid #c3e2ef;
     border-radius: 2vw;
-    color: #70b4d1;
+    color: #c3e2ef;
     font-size: 1vw;
     font-family: Arial, sans-serif;
     font-weight: 600;
@@ -437,7 +454,7 @@ body{
     transition: all 0.4s ease;
 }
 .btn:hover{
-    background-color: #70b4d1d5;
+    background-color: #c3e2ef;
     color: #222222;
 }
 .video{
@@ -502,7 +519,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
 }
 .services{  
     display: flex;
@@ -510,15 +526,27 @@ body{
     justify-content: center;
     flex-direction: column;
 }
+.service-outt{
+    width: 89vw;
+}
 .service-h{
     font-size: 10vw;
     display: flex;
-    justify-content: left; 
-    width: 90vw;
-    color: #c3e2ef;
-    transform: translateX(-20vw);
-    opacity: 0;
-    transition: all 0.3s linear;
+    justify-content: left;
+    font-size: 9vw;
+    line-height: 8vw;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #222222, #222222); /* The gradient background */
+    -webkit-background-clip: text; /* Apply the background to the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(13vw);
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.4s linear;
+    font-family: "Scada", sans-serif;
+    letter-spacing: -0.25vw;
+
 }
 .paraa-btn{
     display: flex;
@@ -532,16 +560,20 @@ body{
 .paraa{
     font-size: 2vw;
     color: #e3f1f8;
+    font-weight: 300;
 }   
 @media (max-width: 500px) {
     .section-4{
-        margin-top: 70vw;
+        margin-top: 75vw;
     }
     .btnn{
         display: none;
     }
     .service-h{
         font-size: 15vw;
+        height: 15vw;
+        width: 70vw;
+        padding-top: 3vw;
     }
     .paraa{
         font-size: 3.5vw;
@@ -576,6 +608,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #e0eeee;
 }
 .picc{
     width: 48vw;
@@ -586,17 +619,14 @@ body{
 .visa{
     transform: translateX(30vw) rotate(25deg);
     opacity: 0;
-    transition: all 0.3s linear;
 }
 .truck{
     transform: translateX(-30vw) rotate(-25deg);
     opacity: 0;
-    transition: all 0.3s linear;
 }
 .software{
     transform: translateX(30vw) rotate(25deg);
     opacity: 0;
-    transition: all 0.3s linear;
 }
 .content-cont-3{
     gap: 5%;
@@ -634,14 +664,16 @@ body{
     margin-top: -5vw;
 }
 .serv-h{
-    font-size: 2.5vw;
+    font-size: 4.5vw;
     word-spacing: 0.3vw;
-    letter-spacing: -0.1vw;
     text-transform: uppercase;
+    font-family: "Gurajada", sans-serif;
+    font-weight: 100;
 }
 .exp{
     font-size: 1.1vw;
     text-transform: capitalize;
+    margin-top: -3.2vw;
 }
 .btn-1{
     width: 10vw;
@@ -655,8 +687,8 @@ body{
 }
 @media (max-width: 500px) {
     .section-5{
-        margin-bottom: -4vw;
         overflow: hidden;
+
     }
     .cont-1{
         display: flex;
@@ -680,7 +712,7 @@ body{
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        margin-top: 0vw;
+        margin-top: 5vw;
     }
     .cont-3{
         display: flex;
@@ -696,11 +728,11 @@ body{
         margin-top: 5vw;
     }
     .serv-h{
-        font-size: 5.8vw;
+        font-size: 6.8vw;
     }
     .exp{
         font-size: 2.8vw;
-        margin-top: 1.5vw;
+        margin-top: -1vw;
     }
     .contt{
         height: 75vw;
@@ -750,10 +782,8 @@ body{
     width: 100vw;
     margin-top: 30vh;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: 'Montserrat', sans-serif;
-    
+    flex-direction: column;
 }
 .about{
     width: 86vw;
@@ -762,23 +792,34 @@ body{
     transition: all 0.3s ease;
 }
 .h-about{
-    font-size: 9vw;
-    text-transform: uppercase;
-    letter-spacing: -0.5vw;
+    font-size: 10vw;
     line-height: 8vw;
-    color: #c3e2ef;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #222222, #222222); /* The gradient background */
+    -webkit-background-clip: text; /* Apply the background to the text */
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateX(15vw);
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.4s linear;
+    font-family: "Scada", sans-serif;
+    letter-spacing: -0.25vw;
+}
+.para-outt{
+    width: 86vw;
 }
 .about-para{
-    width: 50vw;
+    width: 48vw;
     height: fit-content;
-    font-size: 2.5vw;
+    font-size: 2vw;
     margin-top: 3vw;
     margin-left: 1vw;
     transform: translateY(10vh);
     transition: all 0.8s ease;
     opacity: 0;
     color: #e3f1f8;
+    font-weight: 300;
 }
 .about-para-r{
     width: 84vw;
@@ -1029,18 +1070,13 @@ body{
     width: 20px; /* Size of the small ball */
     height: 20px;
     border-radius: 50%;
-    background-color: #00b3ff; /* Color of the small ball */
+    background-color: #c3e2ef; /* Color of the small ball */
     pointer-events: none; /* Ensure the ball doesn't interfere with clicking */
     transition: transform 0.1s ease-out, width 0.5s ease, height 0.5s ease; /* Smooth movement */
     z-index: 9999; /* Ensure it's above other elements */
     transform: translate(-50%, -50%); /* Center the ball on the cursor */
-    /* mix-blend-mode: difference; */
+    mix-blend-mode: difference;
     
-}
-.cursor-ball.large {
-    width: 50px; /* Adjust size as needed */
-    height: 50px;
-    box-shadow: #00b3ff 20px 20px 20px 35px, #00b3ff 20px 20px 20px 35px;
 }
 @media (max-width:500px) {
     .cursor-ball{
