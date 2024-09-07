@@ -385,6 +385,14 @@ body {
   background: black;
 
 }
+#footer-01 img{
+  transition: transform 1s;
+}
+#footer-01 img:hover{
+
+  transform: scale(.95);
+}
+
 
 .footer_row1 {
   height: 100vh;
