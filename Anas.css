@@ -543,7 +543,6 @@ body{
     transform: translateX(13vw);
     height: fit-content;
     width: fit-content;
-    transition: all 0.4s linear;
     font-family: "Scada", sans-serif;
     letter-spacing: -0.25vw;
 
@@ -803,7 +802,6 @@ body{
     transform: translateX(15vw);
     height: fit-content;
     width: fit-content;
-    transition: all 0.4s linear;
     font-family: "Scada", sans-serif;
     letter-spacing: -0.25vw;
 }
