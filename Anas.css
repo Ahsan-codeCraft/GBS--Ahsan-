@@ -615,6 +615,7 @@ body{
     height: 31vw;
     border-radius: 1.5vw;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 .visa{
     transform: translateX(30vw) rotate(25deg);
@@ -1083,4 +1084,6 @@ body{
         display: none;
     }
 }
+
+
 
