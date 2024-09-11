@@ -169,7 +169,7 @@ if (window.innerWidth > 500) {
 
     gsap.to(".h-about", {
         scrollTrigger: {
-            trigger: ".section-6",
+            trigger: ".section-4",
             start: "0% 80%",
             end: "20% 40%",
             scrub: true,
@@ -178,9 +178,9 @@ if (window.innerWidth > 500) {
     });
     gsap.to(".h-about", {
         scrollTrigger: {
-            trigger: ".section-6",
+            trigger: ".section-4",
             start: "0% 100%",
-            end: "20% 30%",
+            end: "20% 40%",
             scrub: true,
         },
         background: "linear-gradient(to right, #c3e2ef 100%, #222222 0%)",

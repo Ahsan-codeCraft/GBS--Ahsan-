@@ -237,11 +237,10 @@ body{
 .menu-right{
     width: 40vw;
     display: flex;
-    justify-content: end;
     flex-direction: column;
     padding-bottom: 10vh;
 }
-.email,.contact-no ,.logoss{
+.email01,.contact-no ,.logoss{
     text-align: end;
 }
 .logoss{
@@ -271,7 +270,7 @@ body{
         transform: translateY(-10px);
     }
 }
-.email,.contact-no{
+.email01,.contact-no{
     font-size: 1.5vw;
     margin-bottom: 1vw;
 }
@@ -281,10 +280,18 @@ body{
     line-height: 5vw;
     cursor: pointer;
     width: fit-content;
+    transition: transform 0.5s linear;
 }
 .a-tags{
     text-decoration: none;
     color: #e0eeee;
+    transition: color 0.4s ease;
+}
+.a-tags:hover{
+    color: #70b4d1;
+}
+.menu-h:hover{
+    transform: translateX(5vw);
 }
 @media (max-width: 500px) {
     #menu01{
@@ -322,10 +329,10 @@ body{
         justify-content: start;
         align-items: start;
     }
-    .email,.contact-no.logoss{
+    .email01,.contact-no.logoss{
         text-align: start   ;
     }
-    .email,.contact-no{
+    .email01,.contact-no{
         font-size: 4.5vw;
         margin-bottom: 2vw;
     }
@@ -734,7 +741,7 @@ select:focus{
 }
 @media (max-width: 500px) {
     .h-about{
-        font-size: 12vw;
+        font-size: 14vw;
         line-height: 11vw;
     }
 }
@@ -780,8 +787,8 @@ select:focus{
     font-size: 2vw;
 }
 .dot{
-    width: 0.5vw;
-    height: 0.5vw;
+    width: 0.55vw;
+    height: 0.55vw;
     border-radius: 50%;
     background-color: #e0eeee;
     display: flex;
