@@ -280,6 +280,10 @@ body{
     cursor: pointer;
     width: fit-content;
 }
+.a-tags{
+    text-decoration: none;
+    color: #e0eeee;
+}
 @media (max-width: 500px) {
     #menu01{
         height: 100vh;
@@ -1082,6 +1086,8 @@ body{
         display: none;
     }
 }
+
+
 
 
 
