@@ -516,13 +516,20 @@ body{
 }
 #head-1{
     cursor: pointer;
+    color: #e0eeee;
+    transition: all 0.3s ease;
 }
 #head-2{
     color: #798081;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 #hr-2{
-    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+#hr-1{
+    transition: all 0.3s ease;
 }
 @media (max-width: 500px) {
     .part-1{
@@ -596,7 +603,7 @@ input:focus{
 }
 
 .dropdown{
-    width: 41.5vw;
+    width: 41.57vw;
     color: #c3e2ef;
 }
 select:focus{
@@ -604,22 +611,22 @@ select:focus{
     outline: none;
 }
 .dropdown3{
-    width: 85.1vw;
+    width: 85.15vw;
     color: #c3e2ef;
 }
 
-/* #hiding{
+#hiding{
     display: none;
-} */
+}
 
-.row-last{
+.row-5{
     width: 83.5vw;
     flex-direction: column;
     gap: 0.7vw;
     margin-top: 2vw;
 }
 .box-feed{
-    width: 82vw;
+    width: 82.2vw;
     height: 15vw;
     padding: 1.5vw;
     font-family: "Poppins", sans-serif ,Arial;
@@ -683,7 +690,7 @@ select:focus{
     .dropdown3{
         width: 85vw;
     }
-    .row-last{
+    .row-5{
         margin-top: 20px;
         gap: 0.7vw;
     }
@@ -716,6 +723,7 @@ select:focus{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 30vh;
 }
 .heading-contact{
     width: 90vw;
@@ -755,6 +763,8 @@ select:focus{
     width: 90vw;
     display: flex;
     height: 28vh;
+    transform: translateY(5vw);
+    opacity: 0;
 }
 .attributes{
     width: 26vw;
@@ -771,6 +781,8 @@ select:focus{
     height: 20vh;
     display: flex;
     align-items: center;
+    transform: translateY(5vw);
+    opacity: 0;
 }
 .email{
     justify-content: center;
@@ -814,7 +826,7 @@ select:focus{
         color: #9DA7A8;
     }
     .inner-answer{
-        font-size: 5vw;
+        font-size: 4.5vw;
         width: 70vw;
     }
     .socials{
