@@ -400,6 +400,7 @@ body{
     line-height: 1.8vw;
     text-transform: none;
     font-weight: 300;
+    width: 45vw;
 }
 .arrow-down{
     width: 1.5vw;
@@ -428,9 +429,10 @@ body{
         height: 82vh;
     }
     .main-para{
-        font-size: 3.5vw;
+        font-size: 3.2vw;
         margin-top: 3vw;
-        line-height: 2.8vw;
+        line-height: 4vw;
+        width: 79vw;
     }
     .arrow-down{
         height: 5vw;
