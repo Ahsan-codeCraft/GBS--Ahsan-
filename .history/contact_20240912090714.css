@@ -821,7 +821,7 @@ select:focus{
   }
   
   .footer_row img {
-    width: 1rem;
+    width: 2rem;
     border: 1px solid white;
     border-radius: 50%;
     /* border: 1px solid white; */

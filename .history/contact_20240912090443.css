@@ -806,41 +806,6 @@ select:focus{
     display: flex;
     align-self: center;
 }
-.footer_row {
-    width: 80vw;
-    padding: 2rem;
-    margin-top: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    color: white;
-    font-size: 2vw;
-    font-family: 'Montserrat', sans-serif;
-  }
-  
-  .footer_row img {
-    width: 1rem;
-    border: 1px solid white;
-    border-radius: 50%;
-    /* border: 1px solid white; */
-  }
-  
-  /* ------------------ */
-  #footer-01 {
-  
-    background: black;
-  
-  }
-  #footer-01 img{
-    transition: transform 1s;
-  }
-  #footer-01 img:hover{
-  
-    transform: scale(.95);
-  }
-    
 .text-wrapper{
     position: relative; /* Make sure this is set */
     display: flex;
