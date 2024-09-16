@@ -11,7 +11,6 @@
 :root{
   /* fonts */
   --PrimaryFont: "Gurajada", sans-serif; 
-  /* --MangoFont: Mango-Font; */
 
   /* colors */
   --PrimaryColor: #70b4d1; 
@@ -154,8 +153,6 @@ body {
 
 .content_h1 {
   font-size: 2.7rem;
-  /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
-  /* font-family: var(--PrimaryFont); */
   font-family: Mango-Font;
   color: var(--PrimaryColor);
   text-align: center;
@@ -164,7 +161,6 @@ body {
 .content_p {
   color: white;
   text-align: center;
-  /* color: skyblue; */
   font-size: 1.2rem;
   padding: 0rem 0rem 1.5rem 0rem;
   width: 100%;
@@ -174,37 +170,6 @@ body {
   width: 450px;
 
 }
-/* 
-.port_content a{
-  border-radius: 2rem;
-  padding: .5rem 1rem;
-  font-weight: bold;
-  font-size: 0.9rem !important;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif !important;
-  font-weight: 100;
-  text-transform: uppercase;
-  color: skyblue;
-  border: 1px solid skyblue;
-  background: transparent;
-  transition: transform 500ms;
-}
-.port_content a:hover{
-  transform: scale(1.04);
-  background-color: var(--PrimaryColor);
-  color: #000 ;
-} */
- 
-.port_content a{
-  font-size: 1vw !important;
-  /* padding: 0.1vw 1vw !important; */
-  color: #fff !important;
-  border-color: #fff !important;
-  text-transform: uppercase !important;
-}
-.port_content a:hover{
-  color: #000 !important;
-}
-
 
 .image img,
 .imaged img {
@@ -218,9 +183,9 @@ body {
   text-align: center;
   text-decoration: none;
   color: skyblue;
-  padding: .7rem 1rem;
+  padding: .2rem .6rem;
   font-weight: bold;
-  font-size: 1.2vw;
+  font-size: 3vw;
   background: transparent;
   border: 2px solid skyblue;
   border-radius: 1rem;
@@ -259,7 +224,6 @@ body {
 
 .socail_item:hover img {
   transform: rotate(360deg);
-  /* Rotate only the image 360 degrees */
 }
 
 .socail_item {
@@ -406,7 +370,6 @@ body {
   width: 2rem;
   border: 1px solid white;
   border-radius: 50%;
-  /* border: 1px solid white; */
 }
 
 /* ------------------ */
@@ -461,8 +424,7 @@ body {
     width: 80%;
   }
   .port_content a{
-    display: block;
-    width: 30vw;
+    /* display: block; */
     margin: 0 auto;
   }  
   .port_content{
