@@ -354,6 +354,22 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+
+@media (max-width:760px) {
+
+  .sec4_text1 {
+    flex-direction: column;
+  }
+
+  .sec_7 {
+    height: 60vh;
+  }
+
+  #btn_5 {
+    font-size: 3vw;
+  }
+}
+
 .my_scroll {
   display: flex;
   flex-wrap: nowrap;
@@ -383,21 +399,6 @@ body {
 .my_card1 p {
   margin-left: auto;
   font-size: 2vw;
-}
-
-@media (max-width:760px) {
-
-  .sec4_text1 {
-    flex-direction: column;
-  }
-
-  .sec_7 {
-    height: auto;
-  }
-
-  #btn_5 {
-    font-size: 3vw;
-  }
 }
 
 @media (max-width:460px) {

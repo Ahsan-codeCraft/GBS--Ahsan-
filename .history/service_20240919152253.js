@@ -160,12 +160,12 @@ const scrollContainer = document.querySelector(".my_scroll");
 
 gsap.to(totalCards, {
   ease: "all",
-    transform: 'translateX(-140%)',
+    transform: 'translateX(60%)',
   scrollTrigger: {
     trigger: ".sec_7",
     scroller: "body",
     start: 'top 0%',
-    end: 'top -150%',
+    end: 'top -100%',
     scrub: 2,  // Smooth out the scroll
     pin: true, // Pin the section in place
 

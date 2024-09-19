@@ -165,7 +165,7 @@ gsap.to(totalCards, {
     trigger: ".sec_7",
     scroller: "body",
     start: 'top 0%',
-    end: 'top -150%',
+    end: 'top -100%',
     scrub: 2,  // Smooth out the scroll
     pin: true, // Pin the section in place
 

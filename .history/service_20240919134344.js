@@ -155,23 +155,27 @@ gsap.from('#my_hr', {
 
 
 // Select the elements and calculate the scroll amount
-const totalCards = document.querySelectorAll(".my_card1");
-const scrollContainer = document.querySelector(".my_scroll");
+// Wrap code in a self-invoking anonymous function
+(() => {
+  // Select elements using gsap.utils.selector
+  const totalCards = gsap.utils.selector(".my_card1").length;
+  const scrollContainer = gsap.utils.selector(".my_scroll");
 
-gsap.to(totalCards, {
-  ease: "all",
-    transform: 'translateX(-140%)',
-  scrollTrigger: {
-    trigger: ".sec_7",
-    scroller: "body",
-    start: 'top 0%',
-    end: 'top -150%',
-    scrub: 2,  // Smooth out the scroll
-    pin: true, // Pin the section in place
+  // Register the ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
 
-    } , // End the scroll when the entire container has scrolled
-  },
-);
+  // Create the scroll animation
+  gsap.to(scrollContainer, {
+    x: () => `-${scrollContainer.getBoundingClientRect().width - document.documentElement.getBoundingClientRect().width}px`,
+    ease: "all",
+    scrollTrigger: {
+      trigger: ".sec_7",
+      pin: true,
+      scrub: 1,
+      end: () => `+=${scrollContainer.getBoundingClientRect().width}`,
+    },
+  });
+})();
 
 
 const sec4Elements = document.querySelectorAll('.sec4_inner');

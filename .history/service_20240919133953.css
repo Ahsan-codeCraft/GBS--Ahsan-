@@ -1,50 +1,45 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-html,
 body {
-  width: 100vw;
-  height: 100%;
-  background-color: black;
+  background-color: #000;
+  height: 100vh;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 ::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
   display: none;
-
+  width: 0;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #FF0000;
+  background-color: #FF0000;
   display: none;
 }
 
 .container_1 {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 3rem;
   height: 110vh;
+  justify-content: center;
   text-align: center;
-  color: #E0EEEE;
 }
-
 
 .container_1 h1 {
   font-size: 8vw;
-  line-height: 78%;
   font-weight: bold;
+  line-height: 78%;
 }
 
 .container_1 p {
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 500;
   padding: 2rem 0;
 }
@@ -54,37 +49,32 @@ body {
 }
 
 .sec_1 h2 {
-  padding: 4rem 0;
-  font-family: Syne, sans-serif;
   color: #E0EEEE;
+  font-family: Syne, sans-serif;
   font-size: 3vw;
   font-weight: 400;
+  padding: 4rem 0;
   text-align: center;
 }
 
 .container_2 {
+  align-items: center;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(Picture/bg.jpg);
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   color: #E0EEEE;
   display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
+  justify-content: center;
   text-align: center;
 }
 
 .container_2 h1 {
-  margin: auto 0;
-  -webkit-text-stroke-width: 0.6px;
   -webkit-text-stroke-color: #E0EEEE;
+  -webkit-text-stroke-width: 0.6px;
   color: transparent;
   font-size: 10vw;
-}
-
-.sec_3 h1 {
-  font-size: 3vw;
-  padding: 3rem 0;
+  margin: auto 0;
 }
 
 .sec_3 {
@@ -93,12 +83,16 @@ body {
   text-align: left;
 }
 
-.sec3_text {
-  white-space: nowrap;
-  width: 65%;
-  margin-left: auto;
+.sec_3 h1 {
+  font-size: 3vw;
+  padding: 3rem 0;
 }
 
+.sec3_text {
+  margin-left: auto;
+  white-space: nowrap;
+  width: 65%;
+}
 
 
 .sec_4 {

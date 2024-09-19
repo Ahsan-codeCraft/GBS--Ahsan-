@@ -155,23 +155,19 @@ gsap.from('#my_hr', {
 
 
 // Select the elements and calculate the scroll amount
-const totalCards = document.querySelectorAll(".my_card1");
+const totalCards = document.querySelectorAll(".my_card1").length;
 const scrollContainer = document.querySelector(".my_scroll");
 
-gsap.to(totalCards, {
-  ease: "all",
-    transform: 'translateX(-140%)',
+gsap.to(scrollContainer, {
+  x: () => `-${scrollContainer.scrollWidth - document.documentElement.clientWidth}px`, // Ensure the scroll ends at the correct position
+  ease: "none",
   scrollTrigger: {
     trigger: ".sec_7",
-    scroller: "body",
-    start: 'top 0%',
-    end: 'top -150%',
-    scrub: 2,  // Smooth out the scroll
     pin: true, // Pin the section in place
-
-    } , // End the scroll when the entire container has scrolled
+    scrub: 2,  // Smooth out the scroll
+    end: () => `+=${scrollContainer.scrollWidth}`, // End the scroll when the entire container has scrolled
   },
-);
+});
 
 
 const sec4Elements = document.querySelectorAll('.sec4_inner');
