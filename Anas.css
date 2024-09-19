@@ -466,6 +466,7 @@ body{
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease;
+    text-decoration: none;
 }
 .btn:hover{
     background-color: #c3e2ef;
@@ -863,6 +864,7 @@ body{
     transform: translateY(5vh);
     transition: all 0.8s ease;
     opacity: 0;
+    text-decoration: none;
 }
 @media (max-width: 500px) {
     .section-6{
