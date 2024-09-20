@@ -89,7 +89,6 @@ gsap.from(sec3, {
         trigger: sec3,
         start: "top center",
         end: "top end",
-        markers:  true,
 
     },
 
