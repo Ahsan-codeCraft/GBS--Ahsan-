@@ -226,6 +226,7 @@ body {
   .sec3_text h2{
     white-space: nowrap;
     font-size: 3vw;
+    /* width: 65%; */
     margin: 0 auto;
   }
   

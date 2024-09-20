@@ -173,7 +173,7 @@ body {
 }
 
 .sec4_text1 h1 {
-  font-size: 8vw;
+  font-size: ;
 }
 
 .sec4_text1 p {
@@ -223,12 +223,7 @@ body {
     font-size: 6vw;
     padding: 2rem .5rem;
   }
-  .sec3_text h2{
-    white-space: nowrap;
-    font-size: 3vw;
-    margin: 0 auto;
-  }
-  
+
   .sec4_text1 p {
 
     font-size: 6vw;
@@ -448,7 +443,7 @@ body {
   }
 
   .sec_7 {
-    display: none;
+    height: auto;
   }
 
   #btn_5 {
@@ -480,7 +475,8 @@ body {
   }
 
   .sec_7 {
-    display: none;
+
+    height: 30vh;
   }
 
   .my_card1 {

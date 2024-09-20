@@ -9,79 +9,79 @@ gsap.from(text1, {
     opacity: 0,
 })
 // ==================================================================================
-const sec2h2 = document.querySelector('#abc')
+const sec2h2 = document.querySelector('#abc');
 
-gsap.from(sec2h2, {
+// Function to apply animations based on screen width
+function applyGSAPAnimations() {
+  const screenWidth = window.innerWidth;
+
+  // Animation for screen width up to 460px
+  if (screenWidth <= 460) {
+    gsap.from(sec2h2, {
+      scrollTrigger: {
+        trigger: sec2h2,
+      },
+      markers: true,
+      duration: 1.5,  // Modify duration
+      opacity: 0,   // Adjust opacity
+    });
+  } else if (screenWidth <= 760) {
+    // Animation for screen width up to 760px
+    gsap.from(sec2h2, {
+      scrollTrigger: {
+        trigger: sec2h2,
+        start: "top center",
+        end: "top end",
+      },
+      y: 30,   // Different Y value
+      duration: 1.2,  // Different duration
+      opacity: 0.7,   // Adjust opacity
+    });
+  } else {
+    // Animation for larger screens (above 760px)
+    gsap.from(sec2h2, {
+      scrollTrigger: {
+        trigger: sec2h2,
+        start: "top 0%",
+        end: "top end",
+      },
+      y: 20,
+      duration: 1,
+      opacity: 0,
+    });
+  }
+}
+
+// Initial animation setup
+applyGSAPAnimations();
+
+// Update animation on window resize
+window.addEventListener('resize', () => {
+  applyGSAPAnimations();
+});
+
+
+
+// =================================================================================
+const sec2 = document.querySelector('.sec_2')
+
+gsap.from(sec2, {
 
     scrollTrigger: {
 
-        trigger: sec2h2,
+        trigger: sec2,
         start: "top center",
         end: "top end",
     },
     y: 20,
     duration: 1,
     opacity: 0,
+    scrub: 1,
 })
 
 
-// ============================== SECTION-02 IMAGE EFFECT ===================================================
-const lightSection = document.querySelector('.light-section');
-const lightEffect = document.querySelector('.light-effect');
-const heading = document.querySelector('.center-heading');
-
-// Split the heading into individual spans for each letter
-heading.innerHTML = heading.textContent
-  .split('')
-  .map(letter => `<span class="letter">${letter}</span>`)
-  .join('');
-
-// Get all the letters as span elements
-const letters = document.querySelectorAll('.letter');
-
-// Track the mouse position
-lightSection.addEventListener('mousemove', (e) => {
-  const { clientX, clientY } = e;
-
-  // Move the spotlight to follow the cursor
-  lightEffect.style.left = `${clientX}px`;
-  lightEffect.style.top = `${clientY}px`;
-
-  // Calculate distance for spotlight effect
-  letters.forEach(letter => {
-    const letterRect = letter.getBoundingClientRect();
-    const letterCenterX = letterRect.left + letterRect.width / 2;
-    const letterCenterY = letterRect.top + letterRect.height / 2;
-
-    const distanceX = clientX - letterCenterX;
-    const distanceY = clientY - letterCenterY;
-    const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
-    
-    const radius = 100; // Set the radius of the effect
-    if (distance <= radius) {
-      letter.classList.add('in-spotlight');
-    } else {
-      letter.classList.remove('in-spotlight');
-    }
-  });
-});
-
-lightSection.addEventListener('mouseleave', () => {
-  // Hide the effect when the mouse leaves the section
-  lightEffect.style.opacity = 0;
-  letters.forEach(letter => letter.classList.remove('in-spotlight'));
-});
-
-lightSection.addEventListener('mouseenter', () => {
-  // Show the effect again when the mouse re-enters the section
-  lightEffect.style.opacity = 1;
-});
-// ==============================================================================================
-// .
-// ======================= SECTION _ 03 Text After Image ======================================
-// --
 const sec3 = document.querySelector('.sec_3')
-if(window.innerWidth > 1060){
+
 gsap.from(sec3, {
 
     scrollTrigger: {
@@ -89,34 +89,13 @@ gsap.from(sec3, {
         trigger: sec3,
         start: "top center",
         end: "top end",
-        markers:  true,
-
     },
-
-    y: 10,
+    y: 20,
     duration: 1,
     opacity: 0,
     scrub: 1,
 })
-}
-else if (window.innerWidth > 300 && window.innerWidth  <= 1060) {
 
-    gsap.from(sec3, {
-
-        scrollTrigger: {
-    
-            trigger: sec3,
-            start: "top 90%",
-        },
-        y: 20,
-        duration: 1,
-        opacity: 0,
-        scrub: 1,
-    })
-}
-    
-
-// =================================================================================
 const sec6 = document.querySelector('.sec_6')
 
 gsap.from(sec6, {
@@ -124,7 +103,8 @@ gsap.from(sec6, {
     scrollTrigger: {
 
         trigger: sec6,
-        start: "top 50%",
+        start: "bottom 50%",
+        end: "top end",
     },
     x: -40,
     duration: 1.5,
@@ -302,3 +282,53 @@ document.addEventListener('DOMContentLoaded', function () {
 // Get references to the background and light effect
 // Get references to the background and light effect
 // Get references to the background and light effect
+const lightSection = document.querySelector('.light-section');
+const lightEffect = document.querySelector('.light-effect');
+const heading = document.querySelector('.center-heading');
+
+// Split the heading into individual spans for each letter
+heading.innerHTML = heading.textContent
+  .split('')
+  .map(letter => `<span class="letter">${letter}</span>`)
+  .join('');
+
+// Get all the letters as span elements
+const letters = document.querySelectorAll('.letter');
+
+// Track the mouse position
+lightSection.addEventListener('mousemove', (e) => {
+  const { clientX, clientY } = e;
+
+  // Move the spotlight to follow the cursor
+  lightEffect.style.left = `${clientX}px`;
+  lightEffect.style.top = `${clientY}px`;
+
+  // Calculate distance for spotlight effect
+  letters.forEach(letter => {
+    const letterRect = letter.getBoundingClientRect();
+    const letterCenterX = letterRect.left + letterRect.width / 2;
+    const letterCenterY = letterRect.top + letterRect.height / 2;
+
+    const distanceX = clientX - letterCenterX;
+    const distanceY = clientY - letterCenterY;
+    const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
+    
+    const radius = 100; // Set the radius of the effect
+    if (distance <= radius) {
+      letter.classList.add('in-spotlight');
+    } else {
+      letter.classList.remove('in-spotlight');
+    }
+  });
+});
+
+lightSection.addEventListener('mouseleave', () => {
+  // Hide the effect when the mouse leaves the section
+  lightEffect.style.opacity = 0;
+  letters.forEach(letter => letter.classList.remove('in-spotlight'));
+});
+
+lightSection.addEventListener('mouseenter', () => {
+  // Show the effect again when the mouse re-enters the section
+  lightEffect.style.opacity = 1;
+});

@@ -25,7 +25,7 @@ gsap.from(sec2h2, {
 })
 
 
-// ============================== SECTION-02 IMAGE EFFECT ===================================================
+// ==============================S===================================================
 const lightSection = document.querySelector('.light-section');
 const lightEffect = document.querySelector('.light-effect');
 const heading = document.querySelector('.center-heading');
@@ -76,9 +76,9 @@ lightSection.addEventListener('mouseenter', () => {
   // Show the effect again when the mouse re-enters the section
   lightEffect.style.opacity = 1;
 });
-// ==============================================================================================
-// .
+
 // ======================= SECTION _ 03 Text After Image ======================================
+console.log(screenWidth)
 // --
 const sec3 = document.querySelector('.sec_3')
 if(window.innerWidth > 1060){
@@ -89,11 +89,8 @@ gsap.from(sec3, {
         trigger: sec3,
         start: "top center",
         end: "top end",
-        markers:  true,
-
     },
-
-    y: 10,
+    y: 20,
     duration: 1,
     opacity: 0,
     scrub: 1,
@@ -124,7 +121,8 @@ gsap.from(sec6, {
     scrollTrigger: {
 
         trigger: sec6,
-        start: "top 50%",
+        start: "bottom 50%",
+        end: "top end",
     },
     x: -40,
     duration: 1.5,

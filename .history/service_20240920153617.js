@@ -124,7 +124,8 @@ gsap.from(sec6, {
     scrollTrigger: {
 
         trigger: sec6,
-        start: "top 50%",
+        start: "bottom 50%",
+        end: "top end",
     },
     x: -40,
     duration: 1.5,

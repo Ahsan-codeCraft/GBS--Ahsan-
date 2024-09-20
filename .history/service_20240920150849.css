@@ -90,7 +90,18 @@ body {
   filter: brightness(0.1); /* Darken the entire background */
   z-index: 1;
 }
-
+@media (max-width: 460px) {
+ .background-image{
+  
+ }
+  .container_1{
+    height: 100vh;
+  }
+  #abc{
+    display: none;
+ 
+  }
+}
 /* Heading in the center */
 .center-heading {
   position: relative;
@@ -133,7 +144,6 @@ body {
   color: #E0EEEE;
   padding: 6rem 4rem;
   text-align: left;
-  position: relative;
 }
 
 .sec3_text {
@@ -173,7 +183,7 @@ body {
 }
 
 .sec4_text1 h1 {
-  font-size: 8vw;
+  font-size: 4rem;
 }
 
 .sec4_text1 p {
@@ -195,7 +205,7 @@ body {
 
 
   .sec4_text2 p {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .sec3_text {
@@ -223,12 +233,7 @@ body {
     font-size: 6vw;
     padding: 2rem .5rem;
   }
-  .sec3_text h2{
-    white-space: nowrap;
-    font-size: 3vw;
-    margin: 0 auto;
-  }
-  
+
   .sec4_text1 p {
 
     font-size: 6vw;
@@ -398,18 +403,7 @@ body {
   position: relative;
   overflow-x: hidden;
 }
-@media (max-width: 460px) {
-  .background-image{
-   filter: brightness(.8);
-  }
-   .container_1{
-     height: 100vh;
-   }
-   #abc{
-     display: none;
-  
-   }
- }
+
 .my_scroll {
   display: flex;
   flex-wrap: nowrap;
@@ -448,7 +442,7 @@ body {
   }
 
   .sec_7 {
-    display: none;
+    height: auto;
   }
 
   #btn_5 {
@@ -480,7 +474,8 @@ body {
   }
 
   .sec_7 {
-    display: none;
+
+    height: 30vh;
   }
 
   .my_card1 {

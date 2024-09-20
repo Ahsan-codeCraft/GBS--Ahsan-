@@ -125,6 +125,7 @@ gsap.from(sec6, {
 
         trigger: sec6,
         start: "top 50%",
+        end: "top end",
     },
     x: -40,
     duration: 1.5,

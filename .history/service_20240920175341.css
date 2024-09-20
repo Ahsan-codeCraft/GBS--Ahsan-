@@ -138,6 +138,7 @@ body {
 
 .sec3_text {
   white-space: nowrap;
+  font-size: 6vw;
   width: 65%;
   margin-left: auto;
 }
@@ -223,12 +224,7 @@ body {
     font-size: 6vw;
     padding: 2rem .5rem;
   }
-  .sec3_text h2{
-    white-space: nowrap;
-    font-size: 3vw;
-    margin: 0 auto;
-  }
-  
+
   .sec4_text1 p {
 
     font-size: 6vw;

@@ -79,21 +79,19 @@ lightSection.addEventListener('mouseenter', () => {
 // ==============================================================================================
 // .
 // ======================= SECTION _ 03 Text After Image ======================================
+console.log(screenWidth)
 // --
-const sec3 = document.querySelector('.sec_3')
 if(window.innerWidth > 1060){
+    const sec3 = document.querySelector('.sec_3')
 gsap.from(sec3, {
 
     scrollTrigger: {
 
         trigger: sec3,
-        start: "top center",
+        start: "top 20%",
         end: "top end",
-        markers:  true,
-
     },
-
-    y: 10,
+    y: 50,
     duration: 1,
     opacity: 0,
     scrub: 1,
@@ -124,7 +122,8 @@ gsap.from(sec6, {
     scrollTrigger: {
 
         trigger: sec6,
-        start: "top 50%",
+        start: "bottom 50%",
+        end: "top end",
     },
     x: -40,
     duration: 1.5,
