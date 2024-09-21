@@ -290,9 +290,6 @@ body{
 .a-tags:hover{
     color: #70b4d1;
 }
-.menu-h:hover{
-    transform: translateX(5vw);
-}
 @media (max-width: 500px) {
     #menu01{
         height: 100vh;
@@ -378,81 +375,23 @@ body{
 
 
 
-  /* SECTION 8 */
-.section-8{
+/* SECTIOn 2 */
+.section-2{
     width: 100vw;
-    height: 40vw;
+    height: 60vh;
+    background: linear-gradient(to bottom,rgba(0, 0, 0,0.4),rgba(0, 0, 0, 1)),
+    url('about-assets/bgImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin-top: 3vw;
-    gap: 7%;
 }
-.heading-container{
-    transition: all 0.3s ease;
-}
-.h-about{
-    font-size: 10vw;
-    line-height: 8vw;
-    text-transform: uppercase;
-    background: linear-gradient(to left, #222222, #222222); /* The gradient background */
-    -webkit-background-clip: text; /* Apply the background to the text */
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-family: "Roboto Condensed", "Poppins", sans-serif ,Arial;
-    font-weight: 500;
-    letter-spacing: -0.2vw;
-    word-spacing: -0.5vw;
-    width: 50vw;
-    height: fit-content;
-    text-align: center;
-}
-.h-about1{
-    transform: translateX(5vw);
-}
-.h-about2{
-    transform: translateX(15vw);
-}
-
-.s8-para{
-    width: 40vw;
+.headingMain{
+    font-size: 8vw;
     color: #e0eeee;
-    font-size: 1.6vw;
-    font-family: "Poppins", sans-serif ,Arial;
-    text-align: center;
+    font-family: "Gurajada" , Arial, Helvetica, sans-serif;
 }
-@media (max-width: 500px) {
-    .section-8{
-        height: 55vh;
-        justify-content: end;
-        gap: 5%;
-    }
-    .h-about{
-        font-size: 16vw;
-        line-height: 14vw;
-        width: 90vw;
-        background: linear-gradient(to left, #222222, #222222); /* The gradient background */
-        -webkit-background-clip: text; /* Apply the background to the text */
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: -0.5vw;
-        word-spacing: -0.5vw;
-        opacity: 0;
-    }
-    .s8-para{
-        width: 78vw;
-        font-size: 5vw;
-    }
-    .h-about1{
-        transform: translateX(-5vw);
-    }
-    .h-about2{
-        transform: translateX(-15vw);
-    }
-}
-
-
 
 
 /* SECTION 5 */
@@ -462,26 +401,40 @@ body{
     justify-content: center;
     align-items: center;
     color: #e0eeee;
+    gap: 5%;
 }
-.awards{
-    width: fit-content;
+.s5-p1{
+    width: 37vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+}
+.s5-cont{
+    font-family: "Poppins", sans-serif ,Arial;
+}
+.h1-s5{
+    font-size: 5vw;
+    margin-bottom: 1vw;
+}
+.para-s5{
+    font-size: 1.5vw;
+}
+.awards{
+    width: 50vw;
 }
 .hover{
-    width: 55vw;
-    transition: width 0.8s ease-out ;
+    width: 50vw;
+    transition: width 0.4s ease-out ;
 }
 .rows{
-    width: 55vw;
+    width: 50vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: "Poppins", sans-serif ,Arial;
     height: 7vw;
-    transition: width 0.8s ease-out ;
+    transition: width 0.4s ease-out ;
 }
 .hr-s5{
     width: 100%;
@@ -489,27 +442,25 @@ body{
     background-color: #e0eeee;
 }
 .start-t{
-    font-size: 1.8vw;
+    font-size: 1.7vw;
 }
 .end-t{
-    font-size: 1.3vw;
+    font-size: 1.2vw;
 }
 .img-s5{
-    width: 17vw;
+    width: 12vw;
     height: auto;
     border-radius: 15px;
-    position: absolute;
-    z-index: 999;
     transform: rotateX(90deg) rotateY(90deg);
     opacity: 0;
-    transition: all 0.5s ease;
+    transition: all 0.4s ease;
 }
-.hover:hover{
-    width: 80vw;
+/* .hover:hover{
+    width: 60vw;
 }
 .hover:hover .rows{
-    width: 80vw;
-}
+    width: 60vw;
+} */
 .hover:hover .img-s5{
     transform: rotateX(0deg) rotateY(0deg);
     opacity: 1;
