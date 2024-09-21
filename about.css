@@ -1,7 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Gurajada&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* latin-ext */
+@font-face {
+    font-family: 'Inder';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inder/v14/w8gUH2YoQe8_4sqzrQ6_3Q.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Inder';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inder/v14/w8gUH2YoQe8_4sq9rQ4.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  
+
+
 
 
 
@@ -11,7 +29,7 @@
 }
 :root{
     /* fonts */
-    --PrimaryFont: "Gurajada", sans-serif; 
+    --PrimaryFont: 'Inder', sans-serif; 
 
     /* colors */
     --PrimaryColor: #70b4d1; 
@@ -387,11 +405,117 @@ body{
     justify-content: center;
     align-items: center;
 }
+
 .headingMain{
     font-size: 8vw;
     color: #e0eeee;
-    font-family: "Gurajada" , Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif ,Arial;
+    margin-top: -4vw;
 }
+
+
+/* SECTION 3 */
+.section-3{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inner-s3{
+    width: 80vw;
+    display: flex;
+}
+.left-s3{
+    width: 45%;
+}
+.tag-s3{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 0.78vw solid #3abdf5;
+    border-radius: 13px 6px 6px 13px;
+    background-color: #e0eeee;
+    height: 7vw;
+    width: 16vw;
+    box-shadow: 12px 12px 18px rgba(0, 0, 0, 0.7);
+    font-family: 'Inder';
+    animation: tagMove 8s alternate infinite linear;
+}
+@keyframes tagMove {
+    0%{
+        transform: translateY(1vw) translateX(-2vw);
+    }
+    50%{
+        transform: translateY(2vw) translateX(-3vw);
+    }
+    100%{
+        transform: translateY(3vw) translateX(-2vw);
+    }
+}
+.number-s3{
+    font-size: 3.7vw;
+    color: #3abdf5;
+}
+.text-s3{
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    color: #222222;
+    line-height: 1.4vw;
+}
+.img-s3{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    animation: imgMove 8s alternate infinite linear;
+}
+@keyframes imgMove {
+    0%{
+        transform: translateX(0vw) translateY(0vw);
+    }
+    50%{
+        transform: translateX(-0.8vw) translateY(-0.8vw);
+    }
+    100%{
+        transform: translateX(0vw) translateY(-1.6vw);
+    }
+}
+
+
+
+.img-plane{
+    width: 2vw;
+    height: auto;
+    background-size: cover;
+}
+.right-s3{
+    width: 55%;
+    display: flex;
+    justify-content: center;
+}
+.inner-r{
+    width: 90%;
+}
+.first-text{
+    display: flex;
+    color: #12D9E3;
+    font-size: 1.7vw;
+    gap: 0.7vw;
+    font-family: var(--PrimaryFont);
+    text-transform: uppercase;
+    margin-top: 2vw;
+}
+.text1-r{
+    margin-top: -0.1vw;
+}
+
+
+
+
+
+
 
 
 /* SECTION 5 */
@@ -455,12 +579,6 @@ body{
     opacity: 0;
     transition: all 0.4s ease;
 }
-/* .hover:hover{
-    width: 60vw;
-}
-.hover:hover .rows{
-    width: 60vw;
-} */
 .hover:hover .img-s5{
     transform: rotateX(0deg) rotateY(0deg);
     opacity: 1;
