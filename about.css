@@ -546,6 +546,9 @@ body{
     font-family: var(--PrimaryFont);
     gap: 7%;
 }
+.icon-s3{
+    transform: translateY(-0.8vw);
+}
 .iconss{
     width: 3vw;
     height: auto;
@@ -574,11 +577,83 @@ body{
     color: #70b4d1;
     font-size: 1.2vw;
     cursor: pointer;
+    text-decoration: none;
 }
 .btnn:hover{
     color: #121315;
     background-color: #70b4d1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION 4 */
+.section-4{
+    width: 100vw;
+    height: 27vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7vh;
+}
+.s4-full{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+}
+.box-s4{
+    display: flex;
+    font-family: var(--PrimaryFont);
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    gap: 5%;
+}
+.num-s4{
+    color: #3abdf5;
+    font-size: 4vw;
+}
+.cont-s4{
+    font-size: 1.5vw;
+    color: #e0eeee;
+}
+.outer{
+    position: absolute;
+    -webkit-text-stroke: 1px #3abdf591;
+    -webkit-text-fill-color: transparent;
+    font-size: 6vw;
+    font-weight: 100;
+    transform: translateX(6vw) translateY(-1.5vw);
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
