@@ -442,6 +442,7 @@ body{
 /* SECTION 5 */
 .section-5{
     width: 100vw;
+    height: 120vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -548,7 +549,7 @@ body{
     overflow: hidden;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
 }
 
 .container-s6{
@@ -640,7 +641,7 @@ body{
 .section-7{
     width: 100vw;
     overflow: hidden;
-    margin-top: 10vw;
+    margin-top: 5vw;
 }
 .s7-wrapper{
     width: 100vw;

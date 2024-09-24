@@ -57,7 +57,7 @@ if (window.innerWidth > 500) {
   
   ScrollTrigger.create({
     trigger:".s7-wrapper",
-    start:"39% 40%",
+    start:"39.5% 40%",
     end: () => `+=${getScrollAmount() * -1}`,
     pin:true,
     animation:tween,
