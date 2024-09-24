@@ -26,6 +26,55 @@ animate();
 
 
 
+const scrollContainer = document.querySelector('.section-6');
+const scrollContent = document.querySelector('.container-s6');
+let isDragging = false;
+let startX;
+let scrollLeft;
+let scrollWidth = scrollContent.scrollWidth;
+
+scrollContainer.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContent.offsetLeft;
+    scrollContainer.style.cursor = 'grabbing';
+});
+
+scrollContainer.addEventListener('mouseleave', () => {
+    isDragging = false;
+    scrollContainer.style.cursor = 'grab';
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+    isDragging = false;
+    scrollContainer.style.cursor = 'grab';
+});
+
+scrollContainer.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 2;
+    scrollContent.style.transform = `translateX(${scrollLeft + walk}px)`;
+
+    // Infinite scroll logic
+    if (scrollLeft + walk > 0) {
+        scrollContent.style.transform = `translateX(-${scrollWidth}px)`;
+        scrollLeft = -scrollWidth;
+    } else if (scrollLeft + walk < -scrollWidth) {
+        scrollContent.style.transform = `translateX(0px)`;
+        scrollLeft = 0;
+    }
+});
+
+
+
+
+
+
+
+
+
 
 
 //  GSAP      

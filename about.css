@@ -641,6 +641,7 @@ body{
     font-size: 6vw;
     font-weight: 100;
     transform: translateX(6vw) translateY(-1.5vw);
+    opacity: 0.25;
 }
 
 
@@ -759,4 +760,37 @@ body{
         order: 3;
         font-size: 4vw;
     }
+}
+
+
+
+
+/* SECTION 6 */
+.section-6{
+    width: 100vw;
+    height: 120vh;
+    overflow: hidden;
+    cursor: grab;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-s6{
+    display: flex;
+    width: calc(40vw * 5);
+    transition: transform 0.3s ease;
+    gap: 2vw;
+    margin-left: 1.5vw;
+}
+
+.cards-s6{
+    width: 40vw;
+    height: 95vh;
+    background-color: #17181B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e0eeee;
+    border-radius: 20px;
 }
