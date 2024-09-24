@@ -25,32 +25,6 @@ animate();
 
 
 
-const races = document.querySelector(".outbox-s7");
-
-function getScrollAmount() {
-	let racesWidth = races.scrollWidth;
-	return -(racesWidth - window.innerWidth)*1.04;
-}
-
-const tween = gsap.to(races, {
-	x: getScrollAmount,
-	duration: 3,
-	ease: "none",
-});
-
-
-ScrollTrigger.create({
-	trigger:".s7-wrapper",
-	start:"39% 40%",
-	end: () => `+=${getScrollAmount() * -1}`,
-	pin:true,
-	animation:tween,
-	scrub:true,
-	invalidateOnRefresh:true,
-})
-
-
-
 
 
 
@@ -67,6 +41,30 @@ gsap.registerPlugin(ScrollTrigger);
 if (window.innerWidth > 500) {
 
 
+  const races = document.querySelector(".outbox-s7");
+
+  function getScrollAmount() {
+    let racesWidth = races.scrollWidth;
+    return -(racesWidth - window.innerWidth)*1.04;
+  }
+  
+  const tween = gsap.to(races, {
+    x: getScrollAmount,
+    duration: 3,
+    ease: "none",
+  });
+  
+  
+  ScrollTrigger.create({
+    trigger:".s7-wrapper",
+    start:"39% 40%",
+    end: () => `+=${getScrollAmount() * -1}`,
+    pin:true,
+    animation:tween,
+    scrub:true,
+    invalidateOnRefresh:true,
+  })
+  
 
   gsap.to(".h-about1", {
     scrollTrigger: {
