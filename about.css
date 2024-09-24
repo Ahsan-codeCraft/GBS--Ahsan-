@@ -874,7 +874,7 @@ body{
     overflow: hidden;
 }
 .outbox-s7 {
-	width:fit-content;
+    width:fit-content;
 	display:flex;
 	flex-wrap:nowrap;
     gap: 1.5vw;

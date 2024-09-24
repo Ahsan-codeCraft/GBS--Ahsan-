@@ -29,7 +29,7 @@ const races = document.querySelector(".outbox-s7");
 
 function getScrollAmount() {
 	let racesWidth = races.scrollWidth;
-	return -(racesWidth - window.innerWidth);
+	return -(racesWidth - window.innerWidth)*1.04;
 }
 
 const tween = gsap.to(races, {
