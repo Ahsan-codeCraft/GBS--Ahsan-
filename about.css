@@ -864,6 +864,11 @@ body{
 
 
 /* SECTION 7 */
+.section-7{
+    width: 100vw;
+    overflow: hidden;
+    margin-top: 10vw;
+}
 .s7-wrapper{
     width: 100vw;
     overflow: hidden;
@@ -872,11 +877,48 @@ body{
 	width:fit-content;
 	display:flex;
 	flex-wrap:nowrap;
+    gap: 1.5vw;
+    margin-left: 1.5vw;
 }
-
-.outbox-s7 h2 {
-	font-family: 'Staatliches', cursive;
-	font-size:30vw;
-	color:#e10600;
-	margin:0;	
+.boxes-s7{
+    background-color: #17181B;
+    width: 36vw;
+    height: 43.1vw;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    border: 2px solid #e0eeee;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.img-work{
+    width: 36vw;
+    height: auto;
+    border-radius: 20px;
+    position: absolute;
+    z-index: -1;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+.info-s7{
+    height: 24%;
+    width: 85%;
+    color: #e0eeee;
+    font-family: var(--PrimaryFont);
+    /* transform: translateY(20vw); */
+    transition: all 0.5s ease;
+}
+.name-s7{
+    font-size: 3vw;
+}
+.prof{
+    font-size: 1.5vw;
+}
+.boxes-s7:hover .img-work{
+    filter: grayscale(0%);
+}
+.boxes-s7:hover .info-s7{
+    transform: translateY(20vw);
 }
