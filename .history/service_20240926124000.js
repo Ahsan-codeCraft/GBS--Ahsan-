@@ -32,78 +32,78 @@ const heading = document.querySelector('.center-heading');
 
 // Split the heading into individual spans for each letter
 heading.innerHTML = heading.textContent
-    .split('')
-    .map(letter => `<span class="letter">${letter}</span>`)
-    .join('');
+  .split('')
+  .map(letter => `<span class="letter">${letter}</span>`)
+  .join('');
 
 // Get all the letters as span elements
 const letters = document.querySelectorAll('.letter');
 
 // Track the mouse position
 lightSection.addEventListener('mousemove', (e) => {
-    const { clientX, clientY } = e;
+  const { clientX, clientY } = e;
 
-    // Move the spotlight to follow the cursor
-    lightEffect.style.left = `${clientX}px`;
-    lightEffect.style.top = `${clientY}px`;
+  // Move the spotlight to follow the cursor
+  lightEffect.style.left = `${clientX}px`;
+  lightEffect.style.top = `${clientY}px`;
 
-    // Calculate distance for spotlight effect
-    letters.forEach(letter => {
-        const letterRect = letter.getBoundingClientRect();
-        const letterCenterX = letterRect.left + letterRect.width / 2;
-        const letterCenterY = letterRect.top + letterRect.height / 2;
+  // Calculate distance for spotlight effect
+  letters.forEach(letter => {
+    const letterRect = letter.getBoundingClientRect();
+    const letterCenterX = letterRect.left + letterRect.width / 2;
+    const letterCenterY = letterRect.top + letterRect.height / 2;
 
-        const distanceX = clientX - letterCenterX;
-        const distanceY = clientY - letterCenterY;
-        const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
-
-        const radius = 100; // Set the radius of the effect
-        if (distance <= radius) {
-            letter.classList.add('in-spotlight');
-        } else {
-            letter.classList.remove('in-spotlight');
-        }
-    });
+    const distanceX = clientX - letterCenterX;
+    const distanceY = clientY - letterCenterY;
+    const distance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
+    
+    const radius = 100; // Set the radius of the effect
+    if (distance <= radius) {
+      letter.classList.add('in-spotlight');
+    } else {
+      letter.classList.remove('in-spotlight');
+    }
+  });
 });
 
 lightSection.addEventListener('mouseleave', () => {
-    // Hide the effect when the mouse leaves the section
-    lightEffect.style.opacity = 0;
-    letters.forEach(letter => letter.classList.remove('in-spotlight'));
+  // Hide the effect when the mouse leaves the section
+  lightEffect.style.opacity = 0;
+  letters.forEach(letter => letter.classList.remove('in-spotlight'));
 });
 
 lightSection.addEventListener('mouseenter', () => {
-    // Show the effect again when the mouse re-enters the section
-    lightEffect.style.opacity = 1;
+  // Show the effect again when the mouse re-enters the section
+  lightEffect.style.opacity = 1;
 });
 // ==============================================================================================
 // .
 // ======================= SECTION _ 03 Text After Image ======================================
 // --
 const sec3 = document.querySelector('.sec_3')
-if (window.innerWidth > 1060) {
-    gsap.from(sec3, {
+if(window.innerWidth > 1060){
+gsap.from(sec3, {
 
-        scrollTrigger: {
+    scrollTrigger: {
 
-            trigger: sec3,
-            start: "top center",
-            end: "top end",
+        trigger: sec3,
+        start: "top center",
+        end: "top end",
 
-        },
+    },
 
-        y: 10,
-        duration: 1,
-        opacity: 0,
-        scrub: 1,
-    })
+    y: 10,
+    duration: 1,
+    opacity: 0,
+    scrub: 1,
+})
 }
-else if (window.innerWidth > 300 && window.innerWidth <= 1060) {
+else if (window.innerWidth > 300 && window.innerWidth  <= 1060) {
 
     gsap.from(sec3, {
 
         scrollTrigger: {
-
+    
             trigger: sec3,
             start: "top 90%",
         },
@@ -113,7 +113,7 @@ else if (window.innerWidth > 300 && window.innerWidth <= 1060) {
         scrub: 1,
     })
 }
-
+    
 
 // =================================================================================
 const sec6 = document.querySelector('.sec_6')
@@ -199,23 +199,34 @@ gsap.from('#my_hr', {
     duration: 0.5,
 });
 
+
+
+
+
+
+
+
+
+
+
+
 // Select the elements and calculate the scroll amount
 const totalCards = document.querySelectorAll(".my_card1");
 const scrollContainer = document.querySelector(".my_scroll");
 
 gsap.to(totalCards, {
-    ease: "all",
+  ease: "all",
     transform: 'translateX(-140%)',
-    scrollTrigger: {
-        trigger: ".sec_7",
-        scroller: "body",
-        start: 'top 0%',
-        end: 'top -150%',
-        scrub: 2,  // Smooth out the scroll
-        pin: true, // Pin the section in place
+  scrollTrigger: {
+    trigger: ".sec_7",
+    scroller: "body",
+    start: 'top 0%',
+    end: 'top -150%',
+    scrub: 2,  // Smooth out the scroll
+    pin: true, // Pin the section in place
 
-    }, // End the scroll when the entire container has scrolled
-},
+    } , // End the scroll when the entire container has scrolled
+  },
 );
 
 
@@ -263,7 +274,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
 // HIDING FORMS
@@ -274,7 +285,7 @@ const head2 = document.getElementById("head-2");
 const hidingForm = document.getElementById("hiding");
 
 
-head2.addEventListener("click", function () {
+head2.addEventListener("click" , function(){
     hr1.style.opacity = 0;
     hr2.style.borderTop = '1px solid black';
     hr2.style.opacity = 1;
@@ -284,7 +295,7 @@ head2.addEventListener("click", function () {
 });
 
 
-head1.addEventListener("click", function () {
+head1.addEventListener("click" , function(){
     hr1.style.borderTop = '1px solid black';
     hr1.style.opacity = 1;
     hr2.style.opacity = 0;
@@ -319,5 +330,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({top: 0, behavior: 'smooth'});
 }
