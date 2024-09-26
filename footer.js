@@ -20,3 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     container.addEventListener('touchmove', handleMouseMove);
     container.addEventListener('touchstart', handleMouseMove);
 });
+
+function scrollToTop() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}
